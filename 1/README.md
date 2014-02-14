@@ -1,4 +1,4 @@
-1 Elementos lexicos
+1 Elementos léxicos
 ===================
 
 Este capítulo describe los elementos léxicos que componen el código fuente C después del procesamiento previo. Estos elementos son llamadas *muestras*. Hay cinco tipos de muestras: palabras clave, identificadores, constantes, operadores y separadores. En ocasiones los espacioes en blanco son necesarios para separar las muestras, también son descritas en este capítulo. 
