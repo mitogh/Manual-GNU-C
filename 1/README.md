@@ -58,5 +58,14 @@ Tanto en ISO C99 y C89 con las extensiones GNU, la siguiente también es reconoz
 ```
 restrict
 ```
-
 ---
+1.3 Constantes
+--------------
+
+Una constante es un valor numérico o un carácter literal, como 5 o 'm'. Todas las constantes son de un tipo de datos en particular, se puede especificar la conversión de tipos para especificar explícitamente el tipo de una constante o dejar que el compilador utilize el tipo predeterminado basado en el valor de la constante.
+
+1.3.1 Constantes enteras
+
+Una constante entera es una secuencía de dígitos, con un prefijo opcional para denotar la base del número. 
+
+Si la secuencia de digitos es precedidad por `0x` o `0X` (cero x o cero X), entonces la constante es 
