@@ -6,6 +6,9 @@ Manual de Referencia de GNU C
 Tabla de contenidos
 -------------------
 
+- [a Prefacio](#prefacio)
+- [a 1 Elementos léxicos](1/README.md)
+
 Prefacio
 --------
 Este es un manual de referencia para el lenguaje C, aplicado por la colección de compiladores de GNU (GCC). En concreto los objetivos de este manual son: 
