@@ -1,13 +1,14 @@
 Manual de Referencia de GNU C
 =============================
 
-[Fuente](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html)
+[Archivo Original](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html)
+-------------------------------------------------------------------------------
 
 Tabla de contenidos
 -------------------
 
-- [a Prefacio](#prefacio)
-- [a 1 Elementos léxicos](1/README.md)
+- [Prefacio](#prefacio)
+- [1 Elementos léxicos](1/README.md)
 
 Prefacio
 --------
