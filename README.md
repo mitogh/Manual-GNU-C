@@ -9,6 +9,10 @@ Tabla de contenidos
 
 - [Prefacio](#prefacio)
 - [1 Elementos léxicos](1/README.md)
+    - [1.1 Identificadores](1/README.md#11-identificadores)
+    - [1.2 Palabras clave](1/README.md#12-palabras-clave)
+    - [1.3 Constantes](1/README.md#13-constantes)
+    - [1.3.1 Constantes enteras](1/README.md#131-constantes-enteras)
 
 Prefacio
 --------
