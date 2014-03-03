@@ -1,5 +1,4 @@
-1 Elementos léxicos
-===================
+# 1 Elementos léxicos #
 
 Este capítulo describe los elementos léxicos que componen el código fuente C después del procesamiento previo. Estos elementos son llamadas *muestras*. Hay cinco tipos de muestras: palabras clave, identificadores, constantes, operadores y separadores. En ocasiones los espacioes en blanco son necesarios para separar las muestras, también son descritas en este capítulo. 
 
@@ -10,23 +9,21 @@ Este capítulo describe los elementos léxicos que componen el código fuente C 
 - Separadores
 - Espacios en blanco
 
-1.1 Identificadores
---------------------
+## 1.1 Identificadores ##
 
-Los identificadores son una secuencia de caràcteres que se utilizan para denominar a las variables, funciones, nuevos tipos de dato y macros de preprocesador. Puede incluir letras, dígitos decimales y el guión bajo '_' en los identificadores.
+Los identificadores son una secuencia de caracteres que se utilizan para denominar a las variables, funciones, nuevos tipos de dato y macros de preprocesador. Puede incluir letras, dígitos decimales y el guión bajo '_' en los identificadores.
 
-El primer caràcter de un identificador no puede ser un dígito. 
+El primer carácter de un identificador no puede ser un dígito. 
 
-Las letras mayusculas y minusculas son diferentes, así que `foo` y `FOO` son dos identificadores diferentes. 
+Las letras mayúsculas y minúsculas son diferentes, así que `foo` y `FOO` son dos identificadores diferentes. 
 
 Cuando se utilizan extensiones GNU, también se puede incluir el carácter del signo dolar '$' en los identificadores.
 
 ---
 
-1.2 Palabras clave
-------------------
+## 1.2 Palabras clave ## 
 
-Las palabras clave son identificadores especiales reservados para uso como parte del lenguaje de programación en sí. No se puede utilizar para cualquier otro propósito.
+Las palabras clave son identificadores especiales reservados para uso como parte del lenguaje de programación en sí. No se pueden utilizar para cualquier otro propósito.
 
 Esta es la lista de palabras clave reconosidas por ANSI C89:
 
@@ -59,8 +56,8 @@ Tanto en ISO C99 y C89 con las extensiones GNU, la siguiente también es reconoz
 restrict
 ```
 ---
-1.3 Constantes
---------------
+
+## 1.3 Constantes ##
 
 Una constante es un valor numérico o un carácter literal, como 5 o 'm'. Todas las constantes son de un tipo de datos en particular, se puede especificar la conversión de tipos para especificar explícitamente el tipo de una constante o dejar que el compilador utilize el tipo predeterminado basado en el valor de la constante.
 
@@ -68,8 +65,7 @@ Una constante es un valor numérico o un carácter literal, como 5 o 'm'. Todas 
 
 Una constante entera es una secuencía de dígitos, con un prefijo opcional para denotar la base del número. 
 
-Si la secuencia de digitos es precedidad por `0x` o `0X` (cero x o cero X), entonces la constante se considera que es hexadecimal (base 16). Los valores hexadecimales pueden utilizar los digitos del 0 al 9, así como las letras 'a' a la 'f' y 'A' a la 'F'. Éstos son algunos ejemplos: 
-
+Si la secuencia de dígitos es precedidad por `0x` o `0X` (cero x o cero X), entonces la constante se considera que es hexadecimal (base 16). Los valores hexadecimales pueden utilizar los dígitos del 0 al 9, así como las letras 'a' a la 'f' y 'A' a la 'F'. Éstos son algunos ejemplos: 
 
 ```
 0x2f
@@ -90,7 +86,6 @@ Si el primer dígito es 0 (cero), y el siguiente caracter no es 'x' o 'X', enton
 
 En todos los demás cassos, la secuencia de dígitos es considerada como decimal (base 10). Los valores decimales sólo pueden utilizar los dígitos del 0 al 9. He aquí algunos ejemplos:
 
-
 ```
 459
 23901
@@ -103,13 +98,13 @@ Existen varios tipos de datos enteros, los enteros cortos, enteros largos, enter
 ```
 u
 U
-    Tipos de entero sin signo
+    Tipos de entero sin signo.
 ```
 
 ```
 l
 L
-    Tipo de entero largos
+    Tipo de entero largos.
 ```
 
 Por ejemplo `45U` es una constante entera sin signo: `unsigned int`. También puedes combinar letras: `45UL` es una constante entera larga sin signo: `unsigned long int`. (Las letras pueden ser utilizadas en cualquier orden).
@@ -126,33 +121,33 @@ Algunos caracteres, como el propio carácter de comilla simple, no se pueden rep
 
 ```
 \\
-Carácter de barra invertida.
+	Carácter de barra invertida.
 \?
-Carácter de signo de interrogación.
+	Carácter de signo de interrogación.
 \'
-Comilla simple
+	Comilla simple
 \"
-Comilla doble.
+	Comilla doble.
 \a
-Alerta audible.
+	Alerta audible.
 \b
-Carácter de retroceso.
+	Carácter de retroceso.
 \e
-Carácter <ESC>. (Esta es una extensión de GNU.) 
+	Carácter <ESC>. (Esta es una extensión de GNU.) 
 \f
-Avance de página.
+	Avance de página.
 \n
-Carácter de nueva linea.
+	Carácter de nueva linea.
 \r
-Retorno de carro.
+	Retorno de carro.
 \t
-Tabulación horizontal.
+	Tabulación horizontal.
 \v
-Tabulación vertical.
+	Tabulación vertical.
 \o, \oo, \ooo
-Número octal.
+	Número octal.
 \xh, \xhh, \xhhh, ...
-Número hexadecimal.
+	Número hexadecimal.
 ```
 
 Para utilizar cualquiera de estas secuencias de escape, encierra la secuancia entre comillas simples y tratalas como si fueran cualquier otro carácter. Por ejemplo, la letra m es 'm' y el carácter de nueva linea es '\n'.
