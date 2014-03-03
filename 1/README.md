@@ -109,7 +109,7 @@ U
 ```
 l
 L
-    Tipo de enteros largos
+    Tipo de entero largos
 ```
 
 Por ejemplo `45U` es una constante entera sin signo: `unsigned int`. También puedes combinar letras: `45UL` es una constante entera larga sin signo: `unsigned long int`. (Las letras pueden ser utilizadas en cualquier orden).
@@ -117,3 +117,44 @@ Por ejemplo `45U` es una constante entera sin signo: `unsigned int`. También pu
 Ambos ISO C99 y las extensiones de GNU C agregan los tipos de entero largo largo: `long long int` y entero largo largo sin signo `unsigned long long int`. Tambien puedes utilizar dos 'L' para obtener una constante entera larga larga `long long int`; agregar una 'U' a eso y entonces tienes una constante larga larga sin signo `unsigned long long int`. Por ejemplo: `45ULL`.
 
 ---
+
+### 1.3.2 Constantes de caracteres ###
+
+Una constante de carácter es generalmente un solo carácter esta encerrado entre commillas simples, como `'Q'`. Una constante de carácter es de tip `int` de manera predeterminada. 
+
+Algunos caracteres, como el propio carácter de comilla simple, no se pueden representar usando un solo carácter. Para representar este tipo de caracteres, hay varias "secuencias de escape" que puedas utilizar: 
+
+```
+\\
+Carácter de barra invertida.
+\?
+Carácter de signo de interrogación.
+\'
+Comilla simple
+\"
+Comilla doble.
+\a
+Alerta audible.
+\b
+Carácter de retroceso.
+\e
+Carácter <ESC>. (Esta es una extensión de GNU.) 
+\f
+Avance de página.
+\n
+Carácter de nueva linea.
+\r
+Retorno de carro.
+\t
+Tabulación horizontal.
+\v
+Tabulación vertical.
+\o, \oo, \ooo
+Número octal.
+\xh, \xhh, \xhhh, ...
+Número hexadecimal.
+```
+
+Para utilizar cualquiera de estas secuencias de escape, encierra la secuancia entre comillas simples y tratalas como si fueran cualquier otro carácter. Por ejemplo, la letra m es 'm' y el carácter de nueva linea es '\n'.
+
+La secuencia de escape del número octal es el carácter de barra invertida seguido por uno, dos o tres digitos octales (0 al 7). Por ejemplo, 101 es el octal equivalente de 65, el cuál es el carácter ASCII 'A'. Por lo tanto, el carácter constante '\101' es lo mismo que el carácter constante 'A'.
