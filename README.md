@@ -8,11 +8,13 @@
 
 - [El manual de Referencia de GNU C](https://github.com/mitogh/Manual-GNU-C)
 - [Prefacio](#prefacio)
-- [1 Elementos léxicos](1/README.md)
-    - [1.1 Identificadores](1/README.md#11-identificadores)
-    - [1.2 Palabras clave](1/README.md#12-palabras-clave)
-    - [1.3 Constantes](1/README.md#13-constantes)
-    - [1.3.1 Constantes enteras](1/README.md#131-constantes-enteras)
+- [1 Elementos léxicos](1#1-elementos-l%C3%A9xicos)
+    - [1.1 Identificadores](1#11-identificadores)
+    - [1.2 Palabras clave](1#12-palabras-clave)
+    - [1.3 Constantes](1#13-constantes)
+    - [1.3.1 Constantes enteras](1#131-constantes-enteras)
+    - [1.3.2 Constantes de caracteres](1#132-constantes-de-caracteres)
+    - [1.3.3 Constantes de números reales](1#133-constantes-de-n%C3%BAmeros-reales) 
 
 ## El manual de referencia de GNU C ##
 

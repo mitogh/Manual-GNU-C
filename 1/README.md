@@ -21,7 +21,7 @@ Cuando se utilizan extensiones GNU, también se puede incluir el carácter del s
 
 ---
 
-## 1.2 Palabras clave ## 
+## 1.2 Palabras clave ##
 
 Las palabras clave son identificadores especiales reservados para uso como parte del lenguaje de programación en sí. No se pueden utilizar para cualquier otro propósito.
 
