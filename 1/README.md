@@ -153,3 +153,30 @@ Algunos caracteres, como el propio carácter de comilla simple, no se pueden rep
 Para utilizar cualquiera de estas secuencias de escape, encierra la secuancia entre comillas simples y tratalas como si fueran cualquier otro carácter. Por ejemplo, la letra m es 'm' y el carácter de nueva linea es '\n'.
 
 La secuencia de escape del número octal es el carácter de barra invertida seguido por uno, dos o tres digitos octales (0 al 7). Por ejemplo, 101 es el octal equivalente de 65, el cuál es el carácter ASCII 'A'. Por lo tanto, el carácter constante '\101' es lo mismo que el carácter constante 'A'.
+
+### 1.3.3 Constantes de números reales ###
+
+Una constante de número real es un valor que representa un número fraccional (punto flotante). Consiste de una secuencia de dgitos que representan el parte entera del número ("todo"), un punto decimal y una secuencia de digitos que representa la parte fraccional. 
+
+Cualquier parte puede ser omitida, la parte fraccional o la parte entera, pero no ambas. Aquí algunos ejemplos:
+
+```
+double a, b, c, d, e, f;
+a = 4.7;
+b = 4.;
+c = 4;
+d = .7;
+e = 0.7;
+```
+
+En la tercera sentencia de asignación, la constante entera 4 es automaticamente convertida de un valor entero a un valor doble. 
+
+Los números reales también ser seguidos por `e`o `E` y un exponente entero. El exponente puede ser negativo o positivo.
+
+```
+double x, y;
+x = 5e2; 	/* x es 5 * 100 o 500.0) */
+y = 5e-2;	/* y es 5 * (1 /100) o 0.05 */
+```
+
+Se pueden agregar letras al final de la constante de un número real, para hacerlo de un tipo en particular. Si agregas la letra F (o f) a una constante de número real, entonces el tipo es `float`. Si agregas la letra L (o l), entonces el tipo es `long double`. Si no se agrega ninguna letra, entonces el tipo es `double`. 
