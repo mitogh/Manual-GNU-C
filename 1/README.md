@@ -189,3 +189,33 @@ Se pueden agregar letras al final de la constante de un número real, para hacer
 
 Constante de cadena es una secuencia de cero o más caracteres, dígitos y secuencias de escape encerradas entre comillas dobles. Una constante de cadena es de tipo "arreglo de caracteres". Todas las constantes de cadena tienen un carácter nulo de terminación (\0) como su último carácter. Las cadenas son almacenadas como arreglos de caracteres, sin ningún atributo de tamaño heredado. El carácter nulo de terminación permite que las funciones de procesamiento de cadenas sepan donde termina la cadena.
 
+Las constantes de cadena adyacentes son concatenadas (combinadas) en una cadena, con el carácter de terminación nula al final de la cadena concatenada. 
+
+Una cadena no puede contener una comilla bole, ya que las comillas dobles son utilizadas para encerrar a la cadena. Para incluir una carácter de comilla doble en una cadena, utiliza la sequencia de escape \". Puedes utilizar culquiera de las secuencias de escape que pueden ser utilizados en las cadenas de caracteres. Aquí hay algunos ejemplos de constantes de cadenas. 
+
+	/* Esta es una constante de cadena simple */
+	"helado de tutti frutti"
+	
+	/* Esta cadena será concatenada, igual a la anterior */
+	"helado" "de" "tutti" "frutti"
+	
+	/* Esta utiliza dos secuencias de escape */
+	"\" ¡hola, mundo! \""
+
+Si una cadena es muy larga para caber en una sola linea, puedes utilizar la diagonal invertida para dividirla en lineas separadas.
+
+	"El especial del día de hoy es un emparedado de pastrami con \ 
+	pan de centeno con una patata knish y un refresco de cereza"
+	
+Las lineas adyacentes son automaticamente concatenadas, así que también puedes tener constantes de cadenas divididas en multiples lineas escribiendolas de manera separadamente y adyacentes. Por ejemplo:
+
+	"El especial del día de mañana es un emparedado de carne de res"
+	"en pan integral decenteno con una kasha knish y agua de seltzer"
+	
+Para insertar un carácter de nueva linea en la cadena, para que cuando la cadena sea impresa será impresa en dos diferentes lineas, puedes utilizar la sequencia de escape de nueva linea '\n'. 
+
+	printf("patatas\nknish");
+	
+imprime
+	patatas
+	knish
