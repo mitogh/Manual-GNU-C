@@ -223,3 +223,10 @@ imprime
 ## 1.4 Operadores ##
 
 Un operador es un símbolo especial que realiza una operación, como sumar o restar, tanto en uno, dos o tres operandos. La cobertura total de los operadores puede ser encontrado en un capítulo posterior. Ver expresiones y operadores.
+
+## 1.5 Separadores ##
+
+Un separador separa símbolos. Los espacios en blanco (ver en la siguiente sección) es un separador, pero no es un símbolo. Los otros separadores son así mismo símbolos de un solo carácter:
+
+    ( ) [ ] { } ; , . :
+
