@@ -219,3 +219,7 @@ Para insertar un carácter de nueva linea en la cadena, para que cuando la caden
 imprime
 	patatas
 	knish
+
+## 1.4 Operadores ##
+
+Un operador es un símbolo especial que realiza una operación, como sumar o restar, tanto en uno, dos o tres operandos. La cobertura total de los operadores puede ser encontrado en un capítulo posterior. Ver expresiones y operadores.
