@@ -18,6 +18,7 @@
     - [1.3.4 Constantes de cadena](1#134-constantes-de-cadena)
     - [1.4 Operadores](1#14-operadores)
     - [1.5 Separadores](1#15-separadores)
+    - [1.6 Espacios en blanco](1#espacios-en-blanco)
 
 ## El manual de referencia de GNU C ##
 
