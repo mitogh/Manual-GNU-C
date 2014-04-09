@@ -230,3 +230,56 @@ Un separador separa símbolos. Los espacios en blanco (ver en la siguiente secci
 
     ( ) [ ] { } ; , . :
 
+## Espacios en blanco ##
+
+Los espacios en blanco es el término utilizado para diferentes caracteres: el espacio en blanco, el carácter de tabulación, el carácter de nueva linea, el carácter de tabulación vertical y el carácter de avance. El espacio en blanco es ignorado (fuera de una cadena y constante de caracteres), y por tanto es opcional, excepto cuando se utiliza para separar muestras. Esto siginifica que
+
+```
+	#include <stdio.h>
+	int 
+	main()
+	{
+		printf("Hola, mundo\n" );
+		return 0;
+	}
+``` 
+
+y
+
+```
+	#include <stdio.h> int main(){printf("Hola, mundo\n"); return 0; }
+```
+
+Funcionalmente son el mismo programa.
+
+Aunque debes usar espacios en blanco para separar muchas muestras, el espacio en blanco no es necesario entre los operadores y operandos, tampoco es requerido entre otros separaadores y lo que separan. 
+
+```
+	/* Todas estas son válidas */ 
+	x++; 
+	x ++ ;
+	x=y+z;
+	x = y + z ;
+	x=arreglo[2];
+	x = arreglo [ 2 ] ;
+	fraccion=numerador / *puntero_denominador;
+	fraccion = numerador / * puntero_denominador;
+```
+
+Por otra parte, siempre que se permita un espacio se permite cualquier cantidad de espacios en blanco.
+
+```
+	/* Estas dos sentencias son funcionalmente identicas */
+	x++;
+	
+	x
+            ++       ;            
+```
+
+En las constantes de cadenas, los espacios y tabulaciones no son ignorados, si no que, forman parte de la cadena. Por lo tanto.
+
+	"knish patata"
+
+no es lo mismo que
+
+	"knish 								patata"
