@@ -16,6 +16,8 @@
     - [1.3.2 Constantes de caracteres](1#132-constantes-de-caracteres)
     - [1.3.3 Constantes de números reales](1#133-constantes-de-n%C3%BAmeros-reales) 
     - [1.3.4 Constantes de cadena](1#134-constantes-de-cadena)
+    - [1.4 Operadores](1#14-operadores)
+    - [1.5 Separadores](1#15-separadores)
 
 ## El manual de referencia de GNU C ##
 
