@@ -9,6 +9,8 @@ Este capítulo describe los elementos léxicos que componen el código fuente C 
 - [Separadores](#15-separadores)
 - [Espacios en blanco](#16-espacios-en-blanco)
 
+---
+
 ## 1.1 Identificadores ##
 
 Los identificadores son una secuencia de caracteres que se utilizan para denominar a las variables, funciones, nuevos tipos de dato y macros de preprocesador. Puede incluir letras, dígitos decimales y el guión bajo '_' en los identificadores.
@@ -60,6 +62,8 @@ restrict
 ## 1.3 Constantes ##
 
 Una constante es un valor numérico o un carácter literal, como 5 o 'm'. Todas las constantes son de un tipo de datos en particular, se puede especificar la conversión de tipos para especificar explícitamente el tipo de una constante o dejar que el compilador utilice el tipo predeterminado basado en el valor de la constante.
+
+---
 
 ### 1.3.1 Constantes enteras ###
 
@@ -220,15 +224,21 @@ imprime
 	patatas
 	knish
 
+---
+
 ## 1.4 Operadores ##
 
 Un operador es un símbolo especial que realiza una operación, como sumar o restar, tanto en uno, dos o tres operandos. La cobertura total de los operadores puede ser encontrado en un capítulo posterior. Ver expresiones y operadores.
+
+---
 
 ## 1.5 Separadores ##
 
 Un separador separa símbolos. Los espacios en blanco (ver en la siguiente sección) es un separador, pero no es un símbolo. Los otros separadores son así mismo símbolos de un solo carácter:
 
     ( ) [ ] { } ; , . :
+
+---
 
 ## 1.6 Espacios en blanco ##
 
