@@ -2,12 +2,12 @@
 
 Este capítulo describe los elementos léxicos que componen el código fuente C después del procesamiento previo. Estos elementos son llamadas *muestras*. Hay cinco tipos de muestras: palabras clave, identificadores, constantes, operadores y separadores. En ocasiones los espacios en blanco son necesarios para separar las muestras, también son descritas en este capítulo. 
 
-- [Identificadores](1#11-identificadores)
-- [Palabras clave](1#12-palabras-clave)
-- [Constantes](1#13-constantes)
-- [Operadores](1#14-operadores)
-- [Separadores](1#15-separadores)
-- [Espacios en blanco]
+- [Identificadores](#11-identificadores)
+- [Palabras clave](#12-palabras-clave)
+- [Constantes](#13-constantes)
+- [Operadores](#14-operadores)
+- [Separadores](#15-separadores)
+- [Espacios en blanco](#16-espacios-en-blanco)
 
 ## 1.1 Identificadores ##
 
