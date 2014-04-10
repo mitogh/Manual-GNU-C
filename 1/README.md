@@ -115,7 +115,7 @@ Ambos ISO C99 y las extensiones de GNU C agregan los tipos de entero largo largo
 
 ### 1.3.2 Constantes de caracteres ###
 
-Una constante de carácter es generalmente un solo carácter esta encerrado entre comillas simples, como `'Q'`. Una constante de carácter es de tip `int` de manera predeterminada. 
+Una constante de carácter es generalmente un solo carácter esta encerrado entre comillas simples, como `'Q'`. Una constante de carácter es de tipo `int` de manera predeterminada. 
 
 Algunos caracteres, como el propio carácter de comilla simple, no se pueden representar usando un solo carácter. Para representar este tipo de caracteres, hay varias "secuencias de escape" que puedas utilizar: 
 
@@ -191,7 +191,7 @@ Constante de cadena es una secuencia de cero o más caracteres, dígitos y secue
 
 Las constantes de cadena adyacentes son concatenadas (combinadas) en una cadena, con el carácter de terminación nula al final de la cadena concatenada. 
 
-Una cadena no puede contener una comilla bole, ya que las comillas dobles son utilizadas para encerrar a la cadena. Para incluir una carácter de comilla doble en una cadena, utiliza la sequencia de escape \". Puedes utilizar culquiera de las secuencias de escape que pueden ser utilizados en las cadenas de caracteres. Aquí hay algunos ejemplos de constantes de cadenas. 
+Una cadena no puede contener una comilla doble, ya que las comillas dobles son utilizadas para encerrar a la cadena. Para incluir una carácter de comilla doble en una cadena, utiliza la secuencia de escape \". Puedes utilizar cualquiera de las secuencias de escape que pueden ser utilizados en las cadenas de caracteres. Aquí hay algunos ejemplos de constantes de cadenas. 
 
 	/* Esta es una constante de cadena simple */
 	"helado de tutti frutti"
@@ -202,17 +202,17 @@ Una cadena no puede contener una comilla bole, ya que las comillas dobles son ut
 	/* Esta utiliza dos secuencias de escape */
 	"\" ¡hola, mundo! \""
 
-Si una cadena es muy larga para caber en una sola linea, puedes utilizar la diagonal invertida para dividirla en lineas separadas.
+Si una cadena es muy larga para caber en una sola línea, puedes utilizar la diagonal invertida para dividirla en líneas separadas.
 
 	"El especial del día de hoy es un emparedado de pastrami con \ 
 	pan de centeno con una patata knish y un refresco de cereza"
 	
-Las lineas adyacentes son automaticamente concatenadas, así que también puedes tener constantes de cadenas divididas en multiples lineas escribiendolas de manera separadamente y adyacentes. Por ejemplo:
+Las líneas adyacentes son automáticamente concatenadas, así que también puedes tener constantes de cadenas divididas en multiples lineas escribiendolas de manera separadamente y adyacentes. Por ejemplo:
 
 	"El especial del día de mañana es un emparedado de carne de res"
 	"en pan integral decenteno con una kasha knish y agua de seltzer"
 	
-Para insertar un carácter de nueva linea en la cadena, para que cuando la cadena sea impresa será impresa en dos diferentes lineas, puedes utilizar la sequencia de escape de nueva linea '\n'. 
+Para insertar un carácter de nueva línea en la cadena, para que cuando la cadena sea impresa será impresa en dos diferentes líneas, puedes utilizar la secuencia de escape de nueva línea '\n'. 
 
 	printf("patatas\nknish");
 	
@@ -232,7 +232,7 @@ Un separador separa símbolos. Los espacios en blanco (ver en la siguiente secci
 
 ## 1.6 Espacios en blanco ##
 
-Los espacios en blanco es el término utilizado para diferentes caracteres: el espacio en blanco, el carácter de tabulación, el carácter de nueva linea, el carácter de tabulación vertical y el carácter de avance. El espacio en blanco es ignorado (fuera de una cadena y constante de caracteres), y por tanto es opcional, excepto cuando se utiliza para separar muestras. Esto siginifica que
+Los espacios en blanco es el término utilizado para diferentes caracteres: el espacio en blanco, el carácter de tabulación, el carácter de nueva línea, el carácter de tabulación vertical y el carácter de avance. El espacio en blanco es ignorado (fuera de una cadena y constante de caracteres), y por tanto es opcional, excepto cuando se utiliza para separar muestras. Esto significa que
 
 ```
 	#include <stdio.h>
@@ -252,7 +252,7 @@ y
 
 Funcionalmente son el mismo programa.
 
-Aunque debes usar espacios en blanco para separar muchas muestras, el espacio en blanco no es necesario entre los operadores y operandos, tampoco es requerido entre otros separaadores y lo que separan. 
+Aunque debes usar espacios en blanco para separar muchas muestras, el espacio en blanco no es necesario entre los operadores y operandos, tampoco es requerido entre otros separadores y lo que separan. 
 
 ```
 	/* Todas estas son válidas */ 
