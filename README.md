@@ -18,7 +18,10 @@
     - [1.3.4 Constantes de cadena](1#134-constantes-de-cadena)
     - [1.4 Operadores](1#14-operadores)
     - [1.5 Separadores](1#15-separadores)
-    - [1.6 Espacios en blanco](1#espacios-en-blanco)
+    - [1.6 Espacios en blanco](1#16-espacios-en-blanco)
+- [2 Tipos de datos](2#2-tipos-de-datos)
+	- [2.1 Tipos primitivos de datos](2#21-tipos-primitivos-de-datos)
+	- [2.1.1](2#211-tipos-enteros)
 
 ## El manual de referencia de GNU C ##
 
