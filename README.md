@@ -1,7 +1,4 @@
-# Manual de Referencia de GNU C #
-
-
-### [Archivo Original](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html) ###
+# Manual de Referencia de GNU C - [Archivo Original](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html)#
 
 
 ## Tabla de contenidos ##

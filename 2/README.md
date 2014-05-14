@@ -18,3 +18,5 @@
 - Tipos de numeros complejos
 
 ### 2.1.1 Tipos enteros ###
+
+El rango de los tipos enteros en tamaño es de al menos 8 bits hasta al menos 32 bits. El estandar C99
