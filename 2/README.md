@@ -11,11 +11,15 @@
 - Clase de especificadores de almacenamiento
 - Renombrado de tipos
 
+===
+
 ## 2.1 Tipos primitivos de datos ##
 
 - Tipos enteros
 - Tipos de número real
 - Tipos de numeros complejos
+
+===
 
 ### 2.1.1 Tipos enteros ###
 
@@ -34,4 +38,8 @@ Mientras que estos rangos otorgan un orden natural, el estándar no requiere que
 - `unsigned short int`.
 	El tipo de dato `unsigned short int` de 16 bits puede almancenar valores enteros en el rago de 0 a 65,535. También se puede hacer referencia a este tipo de dato como `unsigned short`.
 - `int`
-	El tipo de dato `int` de 32 bits puede almacenar valores en el rago de −2,147,483,648 to 2,147,483,647. También se puede hacer referencia a este topo de dato como `unsigned short`.
+	El tipo de dato `int` de 32 bits puede almacenar valores en el rago de −2,147,483,648 a 2,147,483,647. También se puede hacer referencia a este topo de dato como `unsigned short`.
+- `unsigned int`
+	El tipo de dato `unsigned int` de 32 bits puede almacenar valores en el rango de 0 a 4,294,967,295. También se puede hacer referencia a este tipo de datos simplemente como `unsigned`. 
+- `long int`
+	El tipo de dato `long int` de 32 bits puede almacenar vsalores enteros en el rango de al menos −2,147,483,648 a 2,147,483,647. (Dependiendo en tu sistema, este tipo de dato puede ser de 64 bits, en tal caso el rango es identico al del tipo de dato `long long int`). También se puede hacer referencia a este tipo de datos como `long`, `signed long int`, o `signed long`.
