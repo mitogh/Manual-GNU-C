@@ -27,3 +27,11 @@ Mientras que estos rangos otorgan un orden natural, el estándar no requiere que
 	El tipo de dato `signed char` de 8 bits puede almacenar valores enteros en el rango de -128 a 127.
 - `unsigned char`  
 	El tipo de dato `unsigned char` de 8 bits puede almacenar valores enteros en el rango de 0 a 255.
+- `char`
+	Dependiendo en tu sistema, el tipo de dato `char` esta definido con el mismo rango que el `signed char` o el tipo de dato `unsigned char` (sin embargo, hay tres tipos). Por convención debes usar el tipo de dato `char` especificamente para almacenar caracteres (como `m`), incluyendo las secuencias de escape (tal como `\n`).
+- `short int`
+	El tipo de dato `short int` de 16 bits puede almacenar valores enteros en el rando de −32,768 a 32,767.También se puede hacer referencia a este tipo de dato como `short`, `signed short int`, o `signed short`.
+- `unsigned short int`.
+	El tipo de dato `unsigned short int` de 16 bits puede almancenar valores enteros en el rago de 0 a 65,535. También se puede hacer referencia a este tipo de dato como `unsigned short`.
+- `int`
+	El tipo de dato `int` de 32 bits puede almacenar valores en el rago de −2,147,483,648 to 2,147,483,647. También se puede hacer referencia a este topo de dato como `unsigned short`.
