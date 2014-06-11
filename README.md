@@ -50,4 +50,4 @@ El lenguaje C incluye un conjunto de directivas preprocesadas, las cuales son ut
 
 Colaboradores que han ayudado con escribir, editar, corrección de textos, ideas, composiciones tipográficas, o detalles administrativos incluyen a: Diego Andres Alvarez Marin, Nelson H. F. Beebe, Karl Berry, Robert Chassell, Antonio Diaz Diaz, Andreas Foerster, Denver Gingerich, Lisa Goldstein, Robert Hansen, Jean-Christophe Helary, Mogens Hetsholm, Teddy Hogeborn, Joe Humphries, J. Wren Hunt, Adam Johansen, Vladimir Kadlec, Benjamin Kagia, Bjorn Liencres, Steve Morningthunder, Aljosha Papsch, Matthew Plant, Richard Stallman, J. Otto Tennant, Ole Tetlie, Keith Thompson, T.F. Torrey, and James Youngman. Trevis Rothwell escribió la mayoría de los textos y  da  mantenimiento al proyecto.
 
-Algunos ejemplos de programas están basados en algoritmos del libro *The Art of Computer Programmin* de Donald Knuth.
+Algunos ejemplos de programas están basados en algoritmos del libro *The Art of Computer Programming de Donald Knuth* de Donald Knuth.
