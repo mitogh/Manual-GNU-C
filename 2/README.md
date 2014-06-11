@@ -85,3 +85,41 @@ La primera linea declara un flotante llamado foo pero no define su valor; no se 
 Los números de tipo real proporcionados en C son de precisión finita,y en consecuencia,no todos los números reales pueden ser representados exactamente. Muchos sistemas informáticos que GCC compila para usar una representación binaria para los números reales, los números tales como, por ejemplo 4.2. Por esta razón, le recomendamos que considere no comparar números reales por una igualdad exacta con el operador ==, sino comprobar que los números reales se encuentra dentro de una tolerancia aceptable.
 
 Hay otras implicaciones sutiles de estas representaciones impresisas; para más detalles, vea el papel de David Goldberg ` What Every Computer Scientist Should Know About Floating-Point Arithmetic` y la sección 4.2.2 de Donald Knuth `The Art of Computer Programming.`
+
+===
+
+### 2.1.3 Tipos de números complejos. ###
+
+GCC introduce algunos tipos de números complejos como una extensión para C89. Características similares fuerón introducidas en C99, pero hubo un número de diferencias. Primero describimos el estándar del tipo de los números complejos.
+
+- Tipos estándar de números complejos.
+- Extensión de GNU para el tipo de números complejos.
+
+
+#### 2.1.3.1 Tipos estándar de números complejos. ####
+
+Los números complejos fuerón introducidos en C99. Hay tres tipos complejos:
+
+- `float _Complex`
+- `double _Complex`
+- `long double _Comples`
+
+Los nombres comienzan con un guión bajo y una letra en mayuscula para evitar conflictos con identificadores de programas existentes. De cualquier manera, el archivo de cabecera `<complex.h>` del estándar C99 introduce algunos macros que hacen más sencillos el uso de tipos complejos.
+
+- `complex`
+	Expande `_Complex`. Esto perimte que una varible pueda ser declarada `double complex` lo cuál parece  un poco más natural.
+- `I`
+	Una constante de tipo `const float _Complex` con un valor imaginario generalmente referido como `i`.
+
+El archivo de cabecera `<complex.h>` tambien declara un número de funciones para realizar cálculos de números complejos, por ejemplo las funciones `creal` y `cimag` quienes respectivamente regresan la parte real e imaginaria de un número `double complex`. También se proporcionan otras funciones, como se muestra en este ejemplo:
+
+```
+#include <complex.h>
+#include <stdio.h>
+
+void example(void)
+{
+	complex double z = 1.0 + 3.0 * I;
+	printf("La fase es %f, el modulo es %f\n", carg(z), cabs(z));
+}
+```
