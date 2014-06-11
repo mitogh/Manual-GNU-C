@@ -19,6 +19,7 @@
 - [2 Tipos de datos](2#2-tipos-de-datos)
 	- [2.1 Tipos primitivos de datos](2#21-tipos-primitivos-de-datos)
 	- [2.1.1 Tipos enteros](2#211-tipos-enteros)
+	- [2.1.2 Números de tipo real](2#212-n%C3%BAmeros-de-tipo-real)
 
 ## El manual de referencia de GNU C ##
 

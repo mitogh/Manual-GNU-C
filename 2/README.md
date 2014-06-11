@@ -1,8 +1,8 @@
 # 2 Tipos de datos #
 
-- Tipos primitivos
+- [Tipos primitivos](#21-tipos-primitivos-de-datos)
 - Enumeraciones
-- uniones
+- Uniones
 - Estructuras
 - Arreglos
 - Punteros
@@ -15,8 +15,8 @@
 
 ## 2.1 Tipos primitivos de datos ##
 
-- Tipos enteros
-- Tipos de número real
+- [Tipos enteros](#211-tipos-enteros)
+- [Tipos de número real](#212-n%C3%BAmeros-de-tipo-real)
 - Tipos de números complejos
 
 ===
