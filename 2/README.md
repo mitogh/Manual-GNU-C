@@ -92,8 +92,8 @@ Hay otras implicaciones sutiles de estas representaciones impresisas; para más 
 
 GCC introduce algunos tipos de números complejos como una extensión para C89. Características similares fuerón introducidas en C99, pero hubo un número de diferencias. Primero describimos el estándar del tipo de los números complejos.
 
-- Tipos estándar de números complejos.
-- Extensión de GNU para el tipo de números complejos.
+- [Tipos estándar de números complejos.](2#2131-tipos-est%C3%A1ndar-de-n%C3%BAmeros-complejos)
+- [Extensión de GNU para el tipo de números complejos.]
 
 
 #### 2.1.3.1 Tipos estándar de números complejos. ####
@@ -123,3 +123,34 @@ void example(void)
 	printf("La fase es %f, el modulo es %f\n", carg(z), cabs(z));
 }
 ```
+
+===
+
+#### 2.1.3.2 Extensión de GNU para el tipo de números complejos ####
+
+GCC también introduce los tipos complejos como una extensión de GNU para C89, pero su escritura es diferente. Los tipos complejos de punto flotante en las extensiones de GCC C89 son:
+
+- `__complex__ float`
+- `__complex__ double`
+- `__complex__ long double`
+
+La extensión de GCC permite otros tipos complejos de floating-point, así que se pueden declarar tipos complejos de caracteres y tipos enteros; de echo `__complex__` puede ser utilizado con cualquier tipo de dato primitivo. No te vamos a dar una lista completa de todas las posibilidades, pero aqui hay algunos ejemplos:
+
+- `__complex__ float`
+	El tipo de dato `__complex__ float` tiene dos componentes: una parte real y una parte imaginaria, ambas son de tipo `float`.
+- `__complex__ int`
+	El tipo de dato `__complex__ int` también tiene dos componentes: una parte real y una parte imaginaria, ambas del tipo de dato `int`.
+	
+Para extraer la parte real de una expresión de tipo compleja, utiliza la palabra clave `__real__`, seguido de la expresión. Del mismo modo, utiliza `__imag__` para extraer la parte imaginaria.
+
+```
+__complex__ float a = 4 + 3i;
+
+float b = __real__ a;	/* b ahora es 4 */
+float c = __imag__ a;	/* c ahora es 3 */
+```
+
+Este ejemplo crea una variable `a` compleja de tipo flotante, define su parte real como 4 y la imaginaria como 3. Después la parte real es asignada a la variable flotante `b`, y la parte imaginaria es asignada a la variable flotante `c`.
+
+
+===
