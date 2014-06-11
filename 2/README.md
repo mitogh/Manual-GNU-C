@@ -60,3 +60,28 @@ char quux = 'a';
 La primera línea declara un entero llamado `foo` pero no define su valor; se ha quedado sin inicializar, y no se debe asumir ningún valor en particular.
 
 ===
+
+### 2.1.2 Números de tipo real ###
+
+Hay tres tipos de datos que representan a los números fraccionales. Mientras que los tamaños y los rangos de estos tipos son consistentes a través de la mayoría de los sistemas informáticos de hoy en día, historicamente los tamaños de estos tipos varian de sistema a sistema. Como tal, el valor mínimo y el máximo esta almacenado en definiciones de macro en la biblioteca de archivos de cabecera `float.h`. En esta sección, se incluyen nombres de las definiciones de los macros en lugar de sus posibles valores; revisa el archivo de tu sistema `float.h` para los números especificos.
+
+- `float`
+	El tipo de dato `float` es el más pequeño de los tres tipos de datos flotantes, si difiren en tamaño. Su valor mínimo esta alamacenao en el `FLT_MIN`, y no debería ser mayor a `1e-37`. Su valor máximo está almacenado en `FLT_MAX`, y no debería ser menor a `1e37`.
+- `double`
+	El tipo de dato `double` es al menos tan largo como el tipo de dato `float`,y podría ser más grande. Su valor mínimo está almacenado en `DBL_MIN` y su valor máximo esta almacenado en `DBL_MAX`.
+- `long double`.
+	El tipo de dato `long double` es al menos tan largo como el tipo de dato `float`,y podría ser más grande. Su valor mínimo está almacenado en  `LDBL_MIN`, y su valor máximo está almacenado en `LDB_MAX`.
+	
+Todos los tipos de dato flotante son con signo; por ejemplo tratar de usar `unsigned float`, causara un error en tiempo de compilación.
+
+Algunos ejemplos de la declaración y definición de variables de números reales.
+```
+float foo;
+double bar = 114.3943;
+```
+
+La primera linea declara un flotante llamado foo pero no define su valor; no se ha inicializado, y no se debe asumir ningún valor en particular.
+
+Los números de tipo real proporcionados en C son de precisión finita,y en consecuencia,no todos los números reales pueden ser representados exactamente. Muchos sistemas informáticos que GCC compila para usar una representación binaria para los números reales, los números tales como, por ejemplo 4.2. Por esta razón, le recomendamos que considere no comparar números reales por una igualdad exacta con el operador ==, sino comprobar que los números reales se encuentra dentro de una tolerancia aceptable.
+
+Hay otras implicaciones sutiles de estas representaciones impresisas; para más detalles, vea el papel de David Goldberg ` What Every Computer Scientist Should Know About Floating-Point Arithmetic` y la sección 4.2.2 de Donald Knuth `The Art of Computer Programming.`
