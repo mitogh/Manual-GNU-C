@@ -17,7 +17,7 @@
 
 - [Tipos enteros](#211-tipos-enteros)
 - [Tipos de número real](#212-n%C3%BAmeros-de-tipo-real)
-- [Tipos de números complejos](2#213-tipos-de-n%C3%BAmeros-complejos)
+- [Tipos de números complejos](#213-tipos-de-n%C3%BAmeros-complejos)
 
 ===
 
@@ -92,8 +92,8 @@ Hay otras implicaciones sutiles de estas representaciones impresisas; para más 
 
 GCC introduce algunos tipos de números complejos como una extensión para C89. Características similares fuerón introducidas en C99, pero hubo un número de diferencias. Primero describimos el estándar del tipo de los números complejos.
 
-- [Tipos estándar de números complejos.](2#2131-tipos-est%C3%A1ndar-de-n%C3%BAmeros-complejos)
-- [Extensión de GNU para el tipo de números complejos.](2#2132-extensi%C3%B3n-de-gnu-para-el-tipo-de-n%C3%BAmeros-complejos)
+- [Tipos estándar de números complejos.](#2131-tipos-est%C3%A1ndar-de-n%C3%BAmeros-complejos)
+- [Extensión de GNU para el tipo de números complejos.](#2132-extensi%C3%B3n-de-gnu-para-el-tipo-de-n%C3%BAmeros-complejos)
 
 
 #### 2.1.3.1 Tipos estándar de números complejos. ####
