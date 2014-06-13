@@ -152,5 +152,20 @@ float c = __imag__ a;	/* c ahora es 3 */
 
 Este ejemplo crea una variable `a` compleja de tipo flotante, define su parte real como 4 y la imaginaria como 3. Después la parte real es asignada a la variable flotante `b`, y la parte imaginaria es asignada a la variable flotante `c`.
 
+===
 
+## 2.2 Enumeraciones ##
+
+Una enumeración es un tipo de dato personalizado utilizado para almacenar valores de constantes enteras y hacer referencia a ellas por su nombre. De manera predeterminada, estos valores son de tipo `signed int`; de cualquier manera, puedes utilizar la opción del compilador GCC `-fshort-enums` hace que sea utilizado el menor entero posible. Ambos comportamientos conforman el estándar C89, pero mezclando el uso de estas opciones en el mismo programa puede producir incompatibilidades. 
+
+- Definiendo enumeraciones.
+- Declarando enumeraciones.
+
+===
+
+### 2.2.1 Definiendo enumeraciones ###
+
+===
+
+### 2.2.2 Declarando enumeraciones ###
 ===
