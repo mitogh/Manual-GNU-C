@@ -165,6 +165,30 @@ Una enumeración es un tipo de dato personalizado utilizado para almacenar valor
 
 ### 2.2.1 Definiendo enumeraciones ###
 
+Una enumeración se define utilizando la palabra clave `enum`, seguido por el nombre de la enumeración (es opcional), seguido por una lista de nombres constantes (separados por comas y encerradas por llaves), terminando con un punto y coma.
+
+```
+enum frutas{uva, cereza, limon, kiwi};
+```
+
+Ese ejemplo define una enumeración, `frutas` la cuál tiene cuatro constante con valores enteros, `uva, cereza, limón y kiwi` cuales valores son de manera predeterminada 0,1,2 y 3 respectivamente. También puedes especificar uno o más valores de manera explicita. 
+
+```
+enum mas_frutas { platano = -17, manzana, arandano, mango };
+```
+
+El ejemplo define a el plátano con -17 y los valores restantes son incrementados en 1: manzana es -16, arándano es -15 y mango es -14. A menos que se especifique otra cosa, el valor de una enumeración es igual a un valor más que el anterior (y el primer valor predeterminado es 0).
+
+También puedes hacer referencia a el valor definido previamente en la misma enumeración.
+
+```
+enum todavia_mas_fruta { naranja, frambuesa, melocoton, ciruela = melocoton + 2};
+```
+
+En ese ejemplo, naranja es 0, frambuesa es 1, melocotón 2, ciruela es 4.
+
+No se puede utilizar el mismo nombre de una enumeración 
+
 ===
 
 ### 2.2.2 Declarando enumeraciones ###
