@@ -2,7 +2,7 @@
 
 - [Tipos primitivos](#21-tipos-primitivos-de-datos)
 - [Enumeraciones](#22-enumeraciones)
-- Uniones
+- [Uniones](#23-uniones)
 - Estructuras
 - Arreglos
 - Punteros
@@ -225,10 +225,10 @@ Las enumeraciones son útiles en conjunto con la sentencia `switch`, por que el 
 
 Una unión es un tipo de dato personalizado utilizado para almacenar muchas variables en el mismo espacio de memoria. Aunque se puede acceder a cualquiera de estas variables en cualquier momento, solo debes leer de una de ellas a la vez--la asignación de un valor a una de ellas sobrescribe el valor en las otras. 
 
-- [Declarando uniones]()
-- [Declarando variables uniones.]
-- [Accediendo a los miembros de una unión.]
-- [Tamaño de las uniones.]
+- [Declarando uniones](#231-declarando-uniones)
+- [Declarando variables uniones.](#232-declarando-variables-uniones)
+- [Accediendo a los miembros de una unión.](#233-accediendo-a-los-miembros-de-una-uni%C3%B3n)
+- [Tamaño de las uniones.](#234-tama%C3%B1o-de-las-uniones)
 
 ===
 
@@ -257,21 +257,82 @@ Eso define una unión llamada `numeros`, la cuál contiene dos miembros, `i` y `
 
 Puedes declarar variables del tipo unión tanto cuando en la inicialización de la unión y después de la definición, siempre y cuando le hayas dado un nombre al tipo unión.
 
-- [Declarando variables unión en la definición.]()
-- [Declarando variables unión después de la definición]()
-- [Inicializando los miembros de la unión]()
+- [Declarando variables unión en la definición.](#2321-declarando-variables-uni%C3%B3n-en-la-definici%C3%B3n)
+- [Declarando variables unión después de la definición](#2322-declarando-variables-uni%C3%B3n-despu%C3%A9s-de-la-definici%C3%B3n)
+- [Inicializando los miembros de la unión](#2323-inicializando-los-miembros-de-la-uni%C3%B3n)
 
 ===
 
 #### 2.3.2.1 Declarando variables unión en la definición ####
 
+Puedes declarar variables de un tipo unión cuando defines la unión colocando los nombres de las variables después de la llave de cierre de la definición de la unión, pero antes del punto y coma. Puedes declarar más de una variable separando los nombres con comas.
+
+```
+union numeros
+{
+	int i;
+	float f;
+}primer_numero, segundo_numero;
+```
+
+Ese ejemplo declara dos variables del tipo `union numeros`, `primer_numero` y `segundo_numero`
+
 ===
 
 #### 2.3.2.2 Declarando variables unión después de la definición ####
 
+Puedes declarar variables de una unión después de que hayas definido la unión utilizando la palabra clave `union` y el nombre que le hayas dado al tipo unión, seguido por uno o más nombres de variables separados por comas.
+
+```
+union numeros
+{
+	int i;
+	float f;
+};
+union numeros primer_numero, segundo_numero;
+```
+
+Ese ejemplo declara dos variables del tipo `union numeros`, `primer_numero` y `segundo_numero`
+
 ===
 
 #### 2.3.2.3 Inicializando los miembros de la unión ####
+
+Puedes inicializar el primer miembro de una variable union cuando la declaras: 
+
+```
+union numeros
+{
+	int i;
+	float f;
+};
+union numeros primer_numero = { 5 };
+```
+En ese ejemplo, el miembro `i` de `primer_numero` obtiene el valor 5. El miembro f se queda solo.
+
+Otra forma de inicializar un miembro de una unión es especificando el nombre del miembro a inicializar. De esta forma, puedes inicializar cualquier miembro que se quiera, no solo el primero. Hay dos métodos que se pueden utilizar--ya sea el nombre del miembro con dos puntos y después su valor, como esto:
+
+```
+union numeros primer_numero = { f: 3.14159 };
+``` 
+
+o preceder el nombre del miembro con un punto y asignar el valor con el operador de asignación, como esto:
+
+```
+union numeros primer_numero = { .f = 3.14159 };
+``` 
+
+También se puede inicializar el miembro de la variable unión durante la definición.
+
+```
+union numeros
+{
+	int i;
+	float f;
+}primer_numero = { 5 };
+```
+
+===
 
 ### 2.3.3 Accediendo a los miembros de una unión ###
 
