@@ -9,7 +9,7 @@ Este capítulo describe los elementos léxicos que componen el código fuente C 
 - [Separadores](#15-separadores)
 - [Espacios en blanco](#16-espacios-en-blanco)
 
----
+===
 
 ## 1.1 Identificadores ##
 
@@ -21,7 +21,7 @@ Las letras mayúsculas y minúsculas son diferentes, así que `foo` y `FOO` son 
 
 Cuando se utilizan extensiones GNU, también se puede incluir el carácter del signo dólar '$' en los identificadores.
 
----
+===
 
 ## 1.2 Palabras clave ##
 
@@ -57,13 +57,13 @@ Tanto en ISO C99 y C89 con las extensiones GNU, la siguiente también es reconoc
 ```
 restrict
 ```
----
+===
 
 ## 1.3 Constantes ##
 
 Una constante es un valor numérico o un carácter literal, como 5 o 'm'. Todas las constantes son de un tipo de datos en particular, se puede especificar la conversión de tipos para especificar explícitamente el tipo de una constante o dejar que el compilador utilice el tipo predeterminado basado en el valor de la constante.
 
----
+===
 
 ### 1.3.1 Constantes enteras ###
 
@@ -115,7 +115,7 @@ Por ejemplo `45U` es una constante entera sin signo: `unsigned int`. También pu
 
 Ambos ISO C99 y las extensiones de GNU C agregan los tipos de entero largo largo: `long long int` y entero largo largo sin signo `unsigned long long int`. También puedes utilizar dos 'L' para obtener una constante entera larga larga `long long int`; agregar una 'U' a eso y entonces tienes una constante larga larga sin signo `unsigned long long int`. Por ejemplo: `45ULL`.
 
----
+===
 
 ### 1.3.2 Constantes de caracteres ###
 
@@ -158,7 +158,7 @@ Para utilizar cualquiera de estas secuencias de escape, encierra la secuencia en
 
 La secuencia de escape del número octal es el carácter de barra invertida seguido por uno, dos o tres dígitos octales (0 al 7). Por ejemplo, 101 es el octal equivalente de 65, el cuál es el carácter ASCII 'A'. Por lo tanto, el carácter constante '\101' es lo mismo que el carácter constante 'A'.
 
----
+===
 
 ### 1.3.3 Constantes de números reales ###
 
@@ -187,7 +187,7 @@ y = 5e-2;	/* y es 5 * (1 /100) o 0.05 */
 
 Se pueden agregar letras al final de la constante de un número real, para hacerlo de un tipo en particular. Si agregas la letra F (o f) a una constante de número real, entonces el tipo es `float`. Si agregas la letra L (o l), entonces el tipo es `long double`. Si no se agrega ninguna letra, entonces el tipo es `double`. 
 
----
+decenteno
 
 ### 1.3.4 Constantes de cadena ###
 
@@ -211,10 +211,10 @@ Si una cadena es muy larga para caber en una sola línea, puedes utilizar la dia
 	"El especial del día de hoy es un emparedado de pastrami con \ 
 	pan de centeno con una patata knish y un refresco de cereza"
 	
-Las líneas adyacentes son automáticamente concatenadas, así que también puedes tener constantes de cadenas divididas en multiples lineas escribiendolas de manera separadamente y adyacentes. Por ejemplo:
+Las líneas adyacentes son automáticamente concatenadas, así que también puedes tener constantes de cadenas divididas en multiples lineas escribiéndolas de manera separadamente y adyacentes. Por ejemplo:
 
 	"El especial del día de mañana es un emparedado de carne de res"
-	"en pan integral decenteno con una kasha knish y agua de seltzer"
+	"en pan integral de centeno con una kasha knish y agua de seltzer"
 	
 Para insertar un carácter de nueva línea en la cadena, para que cuando la cadena sea impresa será impresa en dos diferentes líneas, puedes utilizar la secuencia de escape de nueva línea '\n'. 
 
@@ -224,13 +224,13 @@ imprime
 	patatas
 	knish
 
----
+===
 
 ## 1.4 Operadores ##
 
 Un operador es un símbolo especial que realiza una operación, como sumar o restar, tanto en uno, dos o tres operandos. La cobertura total de los operadores puede ser encontrado en un capítulo posterior. Ver expresiones y operadores.
 
----
+===
 
 ## 1.5 Separadores ##
 
@@ -238,7 +238,7 @@ Un separador separa símbolos. Los espacios en blanco (ver en la siguiente secci
 
     ( ) [ ] { } ; , . :
 
----
+===
 
 ## 1.6 Espacios en blanco ##
 
@@ -293,3 +293,5 @@ En las constantes de cadenas, los espacios y tabulaciones no son ignorados, si n
 no es lo mismo que
 
 	"knish 								patata"
+	
+===
