@@ -1,7 +1,7 @@
 # 2 Tipos de datos #
 
 - [Tipos primitivos](#21-tipos-primitivos-de-datos)
-- Enumeraciones
+- [Enumeraciones](#22-enumeraciones)
 - Uniones
 - Estructuras
 - Arreglos
@@ -63,10 +63,10 @@ La primera línea declara un entero llamado `foo` pero no define su valor; se ha
 
 ### 2.1.2 Números de tipo real ###
 
-Hay tres tipos de datos que representan a los números fraccionales. Mientras que los tamaños y los rangos de estos tipos son consistentes a través de la mayoría de los sistemas informáticos de hoy en día, historicamente los tamaños de estos tipos varian de sistema a sistema. Como tal, el valor mínimo y el máximo esta almacenado en definiciones de macro en la biblioteca de archivos de cabecera `float.h`. En esta sección, se incluyen nombres de las definiciones de los macros en lugar de sus posibles valores; revisa el archivo de tu sistema `float.h` para los números especificos.
+Hay tres tipos de datos que representan a los números fraccionales. Mientras que los tamaños y los rangos de estos tipos son consistentes a través de la mayoría de los sistemas informáticos de hoy en día, históricamente los tamaños de estos tipos varian de sistema a sistema. Como tal, el valor mínimo y el máximo esta almacenado en definiciones de macro en la biblioteca de archivos de cabecera `float.h`. En esta sección, se incluyen nombres de las definiciones de los macros en lugar de sus posibles valores; revisa el archivo de tu sistema `float.h` para los números específicos.
 
 - `float`
-	El tipo de dato `float` es el más pequeño de los tres tipos de datos flotantes, si difiren en tamaño. Su valor mínimo esta alamacenao en el `FLT_MIN`, y no debería ser mayor a `1e-37`. Su valor máximo está almacenado en `FLT_MAX`, y no debería ser menor a `1e37`.
+	El tipo de dato `float` es el más pequeño de los tres tipos de datos flotantes, si difieren en tamaño. Su valor mínimo esta almacenado en el `FLT_MIN`, y no debería ser mayor a `1e-37`. Su valor máximo está almacenado en `FLT_MAX`, y no debería ser menor a `1e37`.
 - `double`
 	El tipo de dato `double` es al menos tan largo como el tipo de dato `float`,y podría ser más grande. Su valor mínimo está almacenado en `DBL_MIN` y su valor máximo esta almacenado en `DBL_MAX`.
 - `long double`.
@@ -84,13 +84,13 @@ La primera linea declara un flotante llamado foo pero no define su valor; no se 
 
 Los números de tipo real proporcionados en C son de precisión finita,y en consecuencia,no todos los números reales pueden ser representados exactamente. Muchos sistemas informáticos que GCC compila para usar una representación binaria para los números reales, los números tales como, por ejemplo 4.2. Por esta razón, le recomendamos que considere no comparar números reales por una igualdad exacta con el operador ==, sino comprobar que los números reales se encuentra dentro de una tolerancia aceptable.
 
-Hay otras implicaciones sutiles de estas representaciones impresisas; para más detalles, vea el papel de David Goldberg ` What Every Computer Scientist Should Know About Floating-Point Arithmetic` y la sección 4.2.2 de Donald Knuth `The Art of Computer Programming.`
+Hay otras implicaciones sutiles de estas representaciones imprecisas; para más detalles, vea el papel de David Goldberg ` What Every Computer Scientist Should Know About Floating-Point Arithmetic` y la sección 4.2.2 de Donald Knuth `The Art of Computer Programming.`
 
 ===
 
 ### 2.1.3 Tipos de números complejos. ###
 
-GCC introduce algunos tipos de números complejos como una extensión para C89. Características similares fuerón introducidas en C99, pero hubo un número de diferencias. Primero describimos el estándar del tipo de los números complejos.
+GCC introduce algunos tipos de números complejos como una extensión para C89. Características similares fueron introducidas en C99, pero hubo un número de diferencias. Primero describimos el estándar del tipo de los números complejos.
 
 - [Tipos estándar de números complejos.](#2131-tipos-est%C3%A1ndar-de-n%C3%BAmeros-complejos)
 - [Extensión de GNU para el tipo de números complejos.](#2132-extensi%C3%B3n-de-gnu-para-el-tipo-de-n%C3%BAmeros-complejos)
@@ -98,20 +98,20 @@ GCC introduce algunos tipos de números complejos como una extensión para C89. 
 
 #### 2.1.3.1 Tipos estándar de números complejos. ####
 
-Los números complejos fuerón introducidos en C99. Hay tres tipos complejos:
+Los números complejos fueron introducidos en C99. Hay tres tipos complejos:
 
 - `float _Complex`
 - `double _Complex`
-- `long double _Comples`
+- `long double _Complex`
 
-Los nombres comienzan con un guión bajo y una letra en mayuscula para evitar conflictos con identificadores de programas existentes. De cualquier manera, el archivo de cabecera `<complex.h>` del estándar C99 introduce algunos macros que hacen más sencillos el uso de tipos complejos.
+Los nombres comienzan con un guión bajo y una letra en mayúscula para evitar conflictos con identificadores de programas existentes. De cualquier manera, el archivo de cabecera `<complex.h>` del estándar C99 introduce algunos macros que hacen más sencillos el uso de tipos complejos.
 
 - `complex`
-	Expande `_Complex`. Esto perimte que una varible pueda ser declarada `double complex` lo cuál parece  un poco más natural.
+	Expande `_Complex`. Esto permite que una variable pueda ser declarada `double complex` lo cuál parece  un poco más natural.
 - `I`
 	Una constante de tipo `const float _Complex` con un valor imaginario generalmente referido como `i`.
 
-El archivo de cabecera `<complex.h>` tambien declara un número de funciones para realizar cálculos de números complejos, por ejemplo las funciones `creal` y `cimag` quienes respectivamente regresan la parte real e imaginaria de un número `double complex`. También se proporcionan otras funciones, como se muestra en este ejemplo:
+El archivo de cabecera `<complex.h>` también declara un número de funciones para realizar cálculos de números complejos, por ejemplo las funciones `creal` y `cimag` quienes respectivamente regresan la parte real e imaginaria de un número `double complex`. También se proporcionan otras funciones, como se muestra en este ejemplo:
 
 ```
 #include <complex.h>
@@ -158,8 +158,8 @@ Este ejemplo crea una variable `a` compleja de tipo flotante, define su parte re
 
 Una enumeración es un tipo de dato personalizado utilizado para almacenar valores de constantes enteras y hacer referencia a ellas por su nombre. De manera predeterminada, estos valores son de tipo `signed int`; de cualquier manera, puedes utilizar la opción del compilador GCC `-fshort-enums` hace que sea utilizado el menor entero posible. Ambos comportamientos conforman el estándar C89, pero mezclando el uso de estas opciones en el mismo programa puede producir incompatibilidades. 
 
-- Definiendo enumeraciones.
-- Declarando enumeraciones.
+- [Definiendo enumeraciones.](#22-enumeraciones)
+- [Declarando enumeraciones.](#222-declarando-enumeraciones)
 
 ===
 
