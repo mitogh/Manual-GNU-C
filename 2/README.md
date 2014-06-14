@@ -220,3 +220,61 @@ banana = 15;  /* No puedes hacer esto */
 Las enumeraciones son útiles en conjunto con la sentencia `switch`, por que el compilador te puede advertir si has fallado al manejar uno de los valores de la enumeración. Usando el ejemplo anterior, si tu código solo puede manejar `banana`, `manzana` y `mango` pero no `arándano`, GCC puede generar una advertencia.
 
 ===
+
+## 2.3 Uniones ##
+
+Una unión es un tipo de dato personalizado utilizado para almacenar muchas variables en el mismo espacio de memoria. Aunque se puede acceder a cualquiera de estas variables en cualquier momento, solo debes leer de una de ellas a la vez--la asignación de un valor a una de ellas sobrescribe el valor en las otras. 
+
+- [Declarando uniones]()
+- [Declarando variables uniones.]
+- [Accediendo a los miembros de una unión.]
+- [Tamaño de las uniones.]
+
+===
+
+### 2.3.1 Declarando uniones ###
+
+Una unión se define utilizando la palabra clave `union` seguido por la declaración de los miembros de la union, encerrada por llaves. La declaración de cada miembro de una unión es como normalmente se declara una variable--utilizando el tipo de dato seguido por uno o más nombres de variables separados por comas,y terminando con un punto y coma. La definición de una unión se termina con un punto y coma después de la llave de cierre.
+
+También se debe incluir un nombre para la union entre la palabra clave `union` y la llave de apertura. Sintácticamente esto es opcional, pero si se deja fuera, no se puede hacer referencia a esa tipo de dato unión después (sin un `typedef`, mira La sentencia Typedef).
+
+Aquí hay un ejemplo de la definición de una unión simple para almacenar un valor entero y un valor de punto flotante:
+
+
+```
+union numeros
+{
+	int i;
+	float f;
+};
+```
+
+Eso define una unión llamada `numeros`, la cuál contiene dos miembros, `i` y `f`, las cuales son del tipo `int` y `float`, respectivamente.
+
+===
+
+### 2.3.2 Declarando variables uniones. ###
+
+Puedes declarar variables del tipo unión tanto cuando en la inicialización de la unión y después de la definición, siempre y cuando le hayas dado un nombre al tipo unión.
+
+- [Declarando variables unión en la definición.]()
+- [Declarando variables unión después de la definición]()
+- [Inicializando los miembros de la unión]()
+
+===
+
+#### 2.3.2.1 Declarando variables unión en la definición ####
+
+===
+
+#### 2.3.2.2 Declarando variables unión después de la definición ####
+
+===
+
+#### 2.3.2.3 Inicializando los miembros de la unión ####
+
+### 2.3.3 Accediendo a los miembros de una unión ###
+
+===
+
+### 2.3.4 Tamaño de las uniones ###
