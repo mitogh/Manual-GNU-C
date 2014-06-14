@@ -192,4 +192,31 @@ No se puede utilizar el mismo nombre de una enumeración
 ===
 
 ### 2.2.2 Declarando enumeraciones ###
+
+Puedes declarar variables del tipo enumeraciones tanto como cuando la enumeración es definida como después. Este ejemplo declara una variable, llamada `mi_fruta` del tipo `fruta`, todo en una sola sentencia:
+
+```
+enum fruta{platano, manzana, arandano, mango} mi_fruta;
+```
+
+Mientras que este ejemplo declara el tipo y la variable de manera separada.
+
+```
+enum fruta {platano, manzana, arandano, mango};
+enum fruta mi_fruta;
+```
+
+(Por supuesto que no puedes declararlo de esa forma si no has nombrado a la enumeración).
+
+Aunque dichas variables son considerabas del tipo enumeración, puedes asignarles cualquier valor que se puede asignar a una variable del tipo `int`, incluyendo valores de otras enumeraciones. Además, cualquier variable que puede ser asignada a un valor `int` puede ser asignado a un valor de una enumeración.
+
+Sin embargo, no puedes cambiar los valoras en una enumeración una vez que hayan sido definidos; son valores constantes. Por ejemplo, esto no funcionaría. 
+
+```
+enum fruta {platano, manzana, arandano, mango};
+banana = 15;  /* No puedes hacer esto */
+```
+
+Las enumeraciones son útiles en conjunto con la sentencia `switch`, por que el compilador te puede advertir si has fallado al manejar uno de los valores de la enumeración. Usando el ejemplo anterior, si tu código solo puede manejar `banana`, `manzana` y `mango` pero no `arándano`, GCC puede generar una advertencia.
+
 ===
