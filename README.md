@@ -18,11 +18,14 @@
     - [1.6 Espacios en blanco](1#16-espacios-en-blanco)
 - [2 Tipos de datos](2#2-tipos-de-datos)
 	- [2.1 Tipos primitivos de datos](2#21-tipos-primitivos-de-datos)
-	- [2.1.1 Tipos enteros](2#211-tipos-enteros)
-	- [2.1.2 Números de tipo real](2#212-n%C3%BAmeros-de-tipo-real)
-	- [2.1.3 Tipos de números complejos.](2#213-tipos-de-n%C3%BAmeros-complejos)
-		- [2.1.3.1 Tipos estándar de números complejos.](2#2131-tipos-est%C3%A1ndar-de-n%C3%BAmeros-complejos)
-		- [2.1.3.2 Extensión de GNU para el tipo de números complejos](2#2132-extensi%C3%B3n-de-gnu-para-el-tipo-de-n%C3%BAmeros-complejos)
+		- [2.1.1 Tipos enteros](2#211-tipos-enteros)
+		- [2.1.2 Números de tipo real](2#212-n%C3%BAmeros-de-tipo-real)
+		- [2.1.3 Tipos de números complejos.](2#213-tipos-de-n%C3%BAmeros-complejos)
+			- [2.1.3.1 Tipos estándar de números complejos.](2#2131-tipos-est%C3%A1ndar-de-n%C3%BAmeros-complejos)
+			- [2.1.3.2 Extensión de GNU para el tipo de números complejos](2#2132-extensi%C3%B3n-de-gnu-para-el-tipo-de-n%C3%BAmeros-complejos)
+	- [2.2 Enumeraciones](2#22-enumeraciones)
+		- [2.2.1 Definiendo enumeraciones.](2#22-enumeraciones)
+		- [2.2.2 Declarando enumeraciones.](2#222-declarando-enumeraciones)
 
 ## El manual de referencia de GNU C ##
 
