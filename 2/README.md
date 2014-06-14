@@ -158,7 +158,7 @@ Este ejemplo crea una variable `a` compleja de tipo flotante, define su parte re
 
 Una enumeración es un tipo de dato personalizado utilizado para almacenar valores de constantes enteras y hacer referencia a ellas por su nombre. De manera predeterminada, estos valores son de tipo `signed int`; de cualquier manera, puedes utilizar la opción del compilador GCC `-fshort-enums` hace que sea utilizado el menor entero posible. Ambos comportamientos conforman el estándar C89, pero mezclando el uso de estas opciones en el mismo programa puede producir incompatibilidades. 
 
-- [Definiendo enumeraciones.](#22-enumeraciones)
+- [Definiendo enumeraciones.](#221-definiendo-enumeraciones)
 - [Declarando enumeraciones.](#222-declarando-enumeraciones)
 
 ===

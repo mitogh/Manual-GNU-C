@@ -24,7 +24,7 @@
 			- [2.1.3.1 Tipos estándar de números complejos.](2#2131-tipos-est%C3%A1ndar-de-n%C3%BAmeros-complejos)
 			- [2.1.3.2 Extensión de GNU para el tipo de números complejos](2#2132-extensi%C3%B3n-de-gnu-para-el-tipo-de-n%C3%BAmeros-complejos)
 	- [2.2 Enumeraciones](2#22-enumeraciones)
-		- [2.2.1 Definiendo enumeraciones.](2#22-enumeraciones)
+		- [2.2.1 Definiendo enumeraciones.](2#221-definiendo-enumeraciones)
 		- [2.2.2 Declarando enumeraciones.](2#222-declarando-enumeraciones)
 
 ## El manual de referencia de GNU C ##
