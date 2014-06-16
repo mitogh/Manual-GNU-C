@@ -336,6 +336,34 @@ union numeros
 
 ### 2.3.3 Accediendo a los miembros de una unión ###
 
+Se puede acceder a los miembros de una variable de una unión usando el operador de miembro. Se coloca le nombre de la variable unión en el lado izquierdo del operador, y el nombre del miembro en el lado derecho.
+
+```
+union numeros
+{
+	int i;
+	float f;
+};
+
+union numeros primer_numero;
+primer_numero.i = 5;
+primer_numero.f = 3.9;
+```
+
+Observe en este ejemplo que se al darle un valor al miembro f  se remplaza el valor almacenado en el elemento i. 
+
 ===
 
 ### 2.3.4 Tamaño de las uniones ###
+
+El tamaño de una unión es igual al tamaño de su miembro más largo. Considera el siguiente ejemplo de unión de esta sección:
+
+```
+union numeros
+{
+	int i;
+	float f;
+};
+```
+
+El tamaño del tipo unión es el mismo que `sizeof(float)`, por que el tipo `float` es más grande que el tipo `int`. Ya que todos los miembros de una unión ocupan el mismo espacio de memoria, el tamaño del tipo de dato unión no necesita ser lo suficientemente largo para almacenar la suma de sus tamaños; solo necesita ser lo suficientemente largo para almacenar al miembro más grande.
