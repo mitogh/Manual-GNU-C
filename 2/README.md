@@ -413,9 +413,32 @@ Puedes declarar variables del tipo estructuras ya sea durante la definición ini
 
 #### 2.4.2.1 Declarando variables de estructura en la definición ###
 
+Se pueden declarar variables del tipo estructura cuando se define el tipo estructura colocando los nombres de las variables despues de la llave de cierre de la estructura, pero antes del punto y coma final. Se pueden declarar más de un nombre separando los nombres con comas.
+
+```
+struct punto
+{
+  int x, y;
+}primer_punto, segundo_punto;
+```
+
+Ese ejemplo declara dos variables del tipo `struct punto`, `primer_punto` y `segundo_punto`.
+
 ===
 
 #### 2.4.2.2 Declarando variables de estructura después de la definición ###
+
+Se pueden declarar variables del tipo estructura después de la definición del tipo estructura utilizando la palabra clave `structu` y el nombre que le hayas dado al tipo estructura, seguido por uno o más nombres de variables separados por comas.
+
+```
+struct punto
+{
+  int x, y;
+};
+struct punto primer_punto, segundo_punto;
+```
+
+Ese ejemplo declara dos variables del tipo `struct punto`, `primer_punto` y `segundo_punto`.
 
 ===
 
