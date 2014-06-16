@@ -3,7 +3,7 @@
 - [Tipos primitivos](#21-tipos-primitivos-de-datos)
 - [Enumeraciones](#22-enumeraciones)
 - [Uniones](#23-uniones)
-- Estructuras
+- [Estructuras](#24-estructuras)
 - Arreglos
 - Punteros
 - Tipos incompletos
@@ -374,11 +374,11 @@ El tamaño del tipo unión es el mismo que `sizeof(float)`, por que el tipo `flo
 
 Una estructura es un tipo de dato definido por el programador integrado pro variables de otros tipos de datos (posiblemente incluyendo otros tipos de estructura).
 
-- [Definiendo estructuras]()
-- [Declarando variables de estructuras]()
-- [Accediendo a los miembros de una estructura]()
-- [Campos de bits]()
-- [Tamaño de las estructuras]()
+- [Definiendo estructuras](#241-definiendo-estructuras)
+- [Declarando variables de estructuras](#242-declarando-variables-de-estructuras)
+- [Accediendo a los miembros de una estructura](#243-accediendo-a-los-miembros-de-una-estructura)
+- [Campos de bits](#244-campos-de-bits)
+- [Tamaño de las estructuras](#245-tama%C3%B1o-de-las-estructuras)
 
 ### 2.4.1 Definiendo estructuras ###
 
@@ -405,9 +405,9 @@ Las estructuras (y uniones) pueden contener instancias de otras estructuras y un
 
 Puedes declarar variables del tipo estructuras ya sea durante la definición inicial de la estructura y después de la definición, siempre que se le haya dado un nombre a la estructura.
 
-- [Declarando variables de estructura en la definición]()
-- [Declarando variables de estructura después de la definición]()
-- [Inicializando miembros de la estructura]()
+- [Declarando variables de estructura en la definición](#2421-declarando-variables-de-estructura-en-la-definici%C3%B3n)
+- [Declarando variables de estructura después de la definición](#2422-declarando-variables-de-estructura-despu%C3%A9s-de-la-definici%C3%B3n)
+- [Inicializando miembros de la estructura](#2423-inicializando-miembros-de-la-estructura)
 
 ===
 
