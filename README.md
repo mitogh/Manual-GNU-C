@@ -3,8 +3,9 @@
 
 ## Tabla de contenidos ##
 
-- [El manual de Referencia de GNU C](https://github.com/mitogh/Manual-GNU-C)
+- [El manual de Referencia de GNU C](#el-manual-de-referencia-de-gnu-c)
 - [Prefacio](#prefacio)
+	- [Créditos](#cr%C3%A9ditos)
 - [1 Elementos léxicos](1#1-elementos-l%C3%A9xicos)
     - [1.1 Identificadores](1#11-identificadores)
     - [1.2 Palabras clave](1#12-palabras-clave)
@@ -26,6 +27,16 @@
 	- [2.2 Enumeraciones](2#22-enumeraciones)
 		- [2.2.1 Definiendo enumeraciones.](2#221-definiendo-enumeraciones)
 		- [2.2.2 Declarando enumeraciones.](2#222-declarando-enumeraciones)
+	- [2.3 Uniones](2#23-uniones)
+		- [2.3.1 Declarando uniones](2#231-declarando-uniones)
+		- [2.3.2 Declarando variables uniones.](2#232-declarando-variables-uniones)
+			- [2.3.2.1 Declarando variables unión en la definición.](2#2321-declarando-variables-uni%C3%B3n-en-la-definici%C3%B3n)
+			- [2.3.2.2 Declarando variables unión después de la definición](2#2322-declarando-variables-uni%C3%B3n-despu%C3%A9s-de-la-definici%C3%B3n)
+			- [2.3.2.3 Inicializando los miembros de la unión](2#2323-inicializando-los-miembros-de-la-uni%C3%B3n)
+		- [2.3.3 Accediendo a los miembros de una unión.](2#233-accediendo-a-los-miembros-de-una-uni%C3%B3n)
+		- [2.3.4 Tamaño de las uniones.](2#234-tama%C3%B1o-de-las-uniones)
+	
+	
 
 ## El manual de referencia de GNU C ##
 
