@@ -236,7 +236,7 @@ Una unión es un tipo de dato personalizado utilizado para almacenar muchas vari
 
 Una unión se define utilizando la palabra clave `union` seguido por la declaración de los miembros de la union, encerrada por llaves. La declaración de cada miembro de una unión es como normalmente se declara una variable--utilizando el tipo de dato seguido por uno o más nombres de variables separados por comas,y terminando con un punto y coma. La definición de una unión se termina con un punto y coma después de la llave de cierre.
 
-También se debe incluir un nombre para la union entre la palabra clave `union` y la llave de apertura. Sintácticamente esto es opcional, pero si se deja fuera, no se puede hacer referencia a esa tipo de dato unión después (sin un `typedef`, mira La sentencia Typedef).
+También se debe incluir un nombre para la union entre la palabra clave `union` y la llave de apertura. Sintácticamente esto es opcional, pero si se deja fuera, no se puede hacer referencia a esa tipo de dato unión después (sin un `typedef`, mira la sentencia typedef).
 
 Aquí hay un ejemplo de la definición de una unión simple para almacenar un valor entero y un valor de punto flotante:
 
@@ -367,3 +367,71 @@ union numeros
 ```
 
 El tamaño del tipo unión es el mismo que `sizeof(float)`, por que el tipo `float` es más grande que el tipo `int`. Ya que todos los miembros de una unión ocupan el mismo espacio de memoria, el tamaño del tipo de dato unión no necesita ser lo suficientemente largo para almacenar la suma de sus tamaños; solo necesita ser lo suficientemente largo para almacenar al miembro más grande.
+
+===
+
+## 2.4 Estructuras ##
+
+Una estructura es un tipo de dato definido por el programador integrado pro variables de otros tipos de datos (posiblemente incluyendo otros tipos de estructura).
+
+- [Definiendo estructuras]()
+- [Declarando variables de estructuras]()
+- [Accediendo a los miembros de una estructura]()
+- [Campos de bits]()
+- [Tamaño de las estructuras]()
+
+### 2.4.1 Definiendo estructuras ###
+
+Una estructura se define utilizando la palabra clave `struct` seguido por los miembros de la estructura, encerrada por llaves. Cada miembro de la estructura se declara como normalmente se declara una variable--utilizando el topo de dato seguid por uno o más nombres de variables separados por comas, y terminando con un punto y coma. Para terminar la definición de la estructura se coloca un punto y coma después de la llave de cierre.
+
+También se puede colocar un nombre para la estructura entre la palabra clave `struct` y la llave de apertura. Esto es opcional, pero si se deja fuera, no se puede hacer referencia al tipo de dato estructura después (sin un `typedef`, mira la sentencia typedef).
+
+Aquí un ejemplo de la definición de una estructura simple para almacenar las coordenadas X y Y de un punto.
+
+```
+struct punto
+{
+  int x, y;
+};
+```
+
+Eso define un tipo de estructura llamada `struct punto`, la cuál contiene dos miembros X y Y ambas del tipo `int`.
+
+Las estructuras (y uniones) pueden contener instancias de otras estructuras y uniones,pero por supuesto no así mismas. Es posible para una estructura o un tipo unión contener un campo que sea un puntero a el mismo tipo (mira Tipos Incompletos).
+
+===
+
+### 2.4.2 Declarando variables de estructuras ###
+
+Puedes declarar variables del tipo estructuras ya sea durante la definición inicial de la estructura y después de la definición, siempre que se le haya dado un nombre a la estructura.
+
+- [Declarando variables de estructura en la definición]()
+- [Declarando variables de estructura después de la definición]()
+- [Inicializando miembros de la estructura]()
+
+===
+
+#### 2.4.2.1 Declarando variables de estructura en la definición ###
+
+===
+
+#### 2.4.2.2 Declarando variables de estructura después de la definición ###
+
+===
+
+#### 2.4.2.3 Inicializando miembros de la estructura ###
+
+===
+
+### 2.4.3 Accediendo a los miembros de una estructura ###
+
+===
+
+### 2.4.4 Campos de bits ###
+
+===
+
+### 2.4.5 Tamaño de las estructuras ###
+
+===
+
