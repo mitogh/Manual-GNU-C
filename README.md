@@ -35,9 +35,16 @@
 			- [2.3.2.3 Inicializando los miembros de la unión](2#2323-inicializando-los-miembros-de-la-uni%C3%B3n)
 		- [2.3.3 Accediendo a los miembros de una unión.](2#233-accediendo-a-los-miembros-de-una-uni%C3%B3n)
 		- [2.3.4 Tamaño de las uniones.](2#234-tama%C3%B1o-de-las-uniones)
+	- [2.4 Estructuras](2#24-estructuras)
+		- [2.4.1 Definiendo estructuras](2#241-definiendo-estructuras)
+		- [2.4.2 Declarando variables de estructuras](2#242-declarando-variables-de-estructuras)
+			- [2.4.2.1 Declarando variables de estructura en la definición](2#2421-declarando-variables-de-estructura-en-la-definici%C3%B3n)
+			- [2.4.2.2 Declarando variables de estructura después de la definición](2#2422-declarando-variables-de-estructura-despu%C3%A9s-de-la-definici%C3%B3n)
+			- [2.4.2.3 Inicializando miembros de la estructura](2#2423-inicializando-miembros-de-la-estructura)
+		- [2.4.3 Accediendo a los miembros de una estructura](2#243-accediendo-a-los-miembros-de-una-estructura)
+		- [2.4.4 Campos de bits](2#244-campos-de-bits)
+		- [2.4.5 Tamaño de las estructuras](2#245-tama%C3%B1o-de-las-estructuras)
 	
-	
-
 ## El manual de referencia de GNU C ##
 
 - [Prefacio](#prefacio)
