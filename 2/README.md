@@ -428,7 +428,7 @@ Ese ejemplo declara dos variables del tipo `struct punto`, `primer_punto` y `seg
 
 #### 2.4.2.2 Declarando variables de estructura después de la definición ###
 
-Se pueden declarar variables del tipo estructura después de la definición del tipo estructura utilizando la palabra clave `structu` y el nombre que le hayas dado al tipo estructura, seguido por uno o más nombres de variables separados por comas.
+Se pueden declarar variables del tipo estructura después de la definición del tipo estructura utilizando la palabra clave `struct` y el nombre que le hayas dado al tipo estructura, seguido por uno o más nombres de variables separados por comas.
 
 ```
 struct punto
@@ -444,17 +444,130 @@ Ese ejemplo declara dos variables del tipo `struct punto`, `primer_punto` y `seg
 
 #### 2.4.2.3 Inicializando miembros de la estructura ###
 
+Se pueden inicializar los miembros del tipo estructura para que tengan ciertos valores cuando declaras las variables de la estructura.
+
+Si no se inicializa una variable estructura, el efecto depende si tiene almacenamiento estático (ver Almacenamiento de especificadores de clase) o no. Si es, miembros con tipos integrales son inicializados con 0 y miembros punteros son inicializados con NULL; de otro modo, el valor de los miembros de una estructura es indeterminado.
+
+Una forma de inicializar una estructura es especificar en un conjunto de llaves y separadas por comas. Aquellos valores son asignados a los miembros de la estructura en el mismo orden que los miembros que son declarados en la definición de la estructura. 
+
+```
+struct punto
+{
+  int x, y;
+};
+
+struct punto primer_punto = {5, 10};
+```
+
+En ese ejemplo, el miembro `x` de `primer_punto` obtiene el valor 5, y el miembro `y` tiene el valor 10.
+
+Otra forma de incializar los miembros es especificar el nombre de los miembros a inicializar. De esta forma, puedes inicializar los miembros en cualquier orden que se guste, e incluso dejar algunas inicializadas. Hay dos métodos que pueden ser usados. El primer método en C99 y tiene una extensión C89 en GCC:
+
+```
+struct punto primer_punto = { .y = 10, .x = 5 };
+```
+
+También se puede omitir el punto y usar dos puntos en lugar de '=', aunque esto es una extensión de GNU C:
+
+```
+struct punto primer_punto = { y: 10, x: 5 };
+```
+
+También se pueden inicializar las variables de los miembros cuando se declara la variable en la definción de la estructura:
+
+```
+struct puntoy
+{
+  int x, y;
+  char *p;
+};
+
+struct puntoy primer_puntoy = {5};
+```
+
+Aquí, `x`es inicializado con 5, `y` es inicializado con 0, y `p` es inicializado con NULL. La regla aquí es que `y`y `p` son inicializados como si fueran variables estásticas.
+
+Aquí hay otro ejemplo que inicializa a los miembros de la estructura que son en si mismas variables estructura:
+
+```
+struct punto
+{
+  int x, y;
+};
+struct rectangulo
+{
+  struct punto superior_izquierdo, inferior_derecho;
+};
+
+struct rectangulo mi_rectangulo = { {0, 5}, {10, 0} };
+```
+
+Ese ejemplo define la estructura `rectangulo` que consiste de dos variables estructura `punto`. Luego declara una variable del tipo `struct rectangulo` y inicializa los miembros. Ya que sus miembros son variables de estructuras, se utiliza un conjunto de llaves extra al rededor de los miembros que pertenecen a las variables estructura `punto`. Sin embargo, las llaves extras no son necesarias; solo hace que el código sea más fácil de leer.
+
 ===
 
 ### 2.4.3 Accediendo a los miembros de una estructura ###
+
+Puedes a los miembros de una variable estructura utilizand el operador de acceso a los miembros. Se coloca el nombre de la variable estructura del lado izquierdo del operador, y el nombre del miembro en el lado derecho.
+
+```
+struct punto
+{
+  int x, y;
+};
+
+struct punto primer_punto;
+
+primer_punto.x = 0;
+primer_punto.y = 5;
+```
+
+También se puede acceder a los miembros de una variable estructura que es en si mismo una variable estructura.
+
+```
+struct rectangulo
+{
+  struct punto superior_izquierdo, inferior_derecho;
+}
+
+struct rectangulo mi_rectangulo;
+mi_rectangulo.superior_izquierdo.x = 0;
+mi_rectangulo.superior_izquierdo.y = 5;
+
+mi_rectangulo.inferior_derecho.x = 10;
+mi_rectangulo.inferior_derecho.y = 0;
+```
 
 ===
 
 ### 2.4.4 Campos de bits ###
 
+Se pueden crear structuras con miembros enteros de tamaños no estandar, llamados `bit fields`. Esto se hace especificando un miembro entero (`int, char, long int`, etc) de forma común, y insertando dos puntos y el numero de bits que el miembro debe ocupar entre el nombre del miembro y el punto y coma.
+
+```
+struct carta
+{
+  unsigned int palo : 2;
+  unsigned int valor_carta : 4;
+}
+```
+
+Esa ejemplo define un tipo de estructura con dos campos de bits, `palo` y `valor_carta`, los cuales toman 2 bits y 4 bits, respectivamente, `carta` puede almacenar valores de 0 a 3, y `valor_carta` puede almacenar valores desde 0 hasta 15. Nota que estos campos de bits fuerón declarados como `unsigned int`; si se hubierán declarado enteros, entonces sus rangos habrian sido desde -2 a 1, y desde -8 a 7 respectivamente. 
+
+
+Más generalmente, el rango de un campo de bits sin signo de N bits es desde 0 hasta 2^N - 1, y el rango de un campo de un campo de bits con signo de N bits es desde -(2^N) / 2 hasta ((2^N) / 2) - 1.
+
+Los campos de bits pueden ser especificados sin un nombre para controlar que bits son realmente utilizados dentro de la unidad que los contiene. Sin embargo, el efecto de esto no es muy portable y es raramente utilizado. También puedes especificar un campo de bits de tamaño 0, lo que indica que los campos de bits posteriores no los campos posteriores deben ser empaquetados en la unidad que contieen el campo de bit anterior. Esto no es igualmente útil en general.
+
 ===
 
 ### 2.4.5 Tamaño de las estructuras ###
+
+El tamaño de un tipo estructura es igual a la suma del tamaño de todos sus miembros, posiblemente incluye relleno para hacer que el tipo de estructura para alinearlo a un limite de bytes en particular. Los detalles varían dependiendo la plataforma de la computadora, pero no sería atipico ver estructuras con relleno para alinearse en los limites de cuatro-o-ocho-bytes. Esto se hace con la finalidad de acelerar el acceso a la memoria de las instancias del tipo estructura.
+
+Como una extención de GNU, GCC permite estructuras sin miembros. Tales estructuras tienen un tamaño cero.
+
+Si se desea omitir el rellemo de un tipo estructura (lo cuál reducira el acceso a la memoria), entonces GCC otorga multiples metodos para el empaquetado fuera. El método más fácil y sencillo es usar la opción del compilador `-fpack-struct`. Para más detalles en la omisión del empaquetado, por favor ver el manual GCC que corresponda a la versión de tu compilador.
 
 ===
 
