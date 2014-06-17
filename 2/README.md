@@ -395,7 +395,7 @@ struct punto
 };
 ```
 
-Eso define un tipo de estructura llamada `struct punto`, la cuál contiene dos miembros X y Y ambas del tipo `int`.
+Eso define un tipo de estructura llamada `struct punto`, la cuál contiene dos miembros `X` y `Y` ambas del tipo `int`.
 
 Las estructuras (y uniones) pueden contener instancias de otras estructuras y uniones,pero por supuesto no así mismas. Es posible para una estructura o un tipo unión contener un campo que sea un puntero a el mismo tipo (mira Tipos Incompletos).
 
@@ -568,6 +568,140 @@ El tamaño de un tipo estructura es igual a la suma del tamaño de todos sus mie
 Como una extensión de GNU, GCC permite estructuras sin miembros. Tales estructuras tienen un tamaño cero.
 
 Si se desea omitir el relleno de un tipo estructura (lo cuál reducirá el acceso a la memoria), entonces GCC otorga multiples métodos para el empaquetado fuera. El método más fácil y sencillo es usar la opción del compilador `-fpack-struct`. Para más detalles en la omisión del empaquetado, por favor ver el manual GCC que corresponda a la versión de tu compilador.
+
+===
+
+## 2.5 Arreglos ##
+
+Un arreglo es una estructura de datos que permite almacenar uno o más elementos consecutivamente en memoria. En C,los elementos del arreglo comienzan el índice en la posición zero no uno.
+
+- Declarando arreglos
+- Inicializando Arreglos
+- Accediendo a los elementos del Arreglo
+- Arreglos multidimensionales
+- Arreglos como cadenas
+- Arreglos de uniones
+- Arreglos de estructuras
+
+===
+
+### 2.5.1 Declarando arreglos ###
+
+Un arreglo se declara especificando el tipo de dato para sus elementos, su nombre, y el número de elementos que puede almacenar. Aquí hay un ejemplo que declara un arreglo que puede almacenar diez enteros:
+
+```
+int my_arreglo[10];
+```
+
+Para código estándar C, el número de elementos en un arreglo debe ser positivo.
+
+Como una extensión de GNU, el número de  elementos puede ser tan pequeña como cero. Los arreglos con longitud cero son útiles como el último elemento de una estructura que en realidad es una cabecera para un objeto de longitud variable.
+
+```
+struct linea
+{
+  int longitud;
+  int contenido[0];
+};
+
+{
+  struct linea *esta_linea (struct linea *)
+    malloc(sizeof(struct linea) + esta_longitud);
+    esta_linea -> longitud = esta_longitud;
+}
+```
+
+Otra Extensión de GNU permite declarar el tamaño de un arreglo utilizando variables, en lugar de solo constantes. Por ejemplo, aquí hay una función que declara un arreglo utilizando el parámetro como número de elementos.
+
+```
+int
+mi_funcion(int numero)
+{
+  int mi_arreglo[numero];
+  ...
+}
+```
+
+===
+
+### 2.5.2 Inicializando Arreglos ###
+
+Se pueden inicializar los elementos en un arreglo cuando se declara listando los valores iniciales, separados por comas en un conjunto de llaves. Aquí hay un ejemplo:
+
+```
+int mi_arreglo[5] = { 0, 1, 2, 3, 4 };
+```
+
+No tienes que inicializar explícitamente todos los elementos del arreglo. Por ejemplo, este código inicializa los primeros tres elementos como se especifica, y luego los últimos dos elementos a un valor predeterminado de cero.
+
+```
+int mi_arreglo[5] = { 0, 1, 2 };
+```
+
+Cuando se usa ya sea ISO C99, o C89 con las extensiones GNU, puedes inicializar los elementos del arreglo fuera de orden, especificando que índice del arreglo inicializar. Para hacer esto, incluye el índice del arreglo en corchetes, y opcionalmente el operador de asignación, antes del valor. Aquí esta un ejemplo:
+
+```
+int mi_arreglo[5] = { [2] 5, [4] 9};
+```
+
+O utilizando el operador de asignación:
+
+```
+int mi_arreglo[5] = { [2] = 5, [4] = 9 };
+```
+
+Ambos ejemplos son equivalentes a: 
+
+```
+in mi_arreglo[5] = { 0, 0, 5, 0, 9 };
+```
+
+Cuando se utilizan extensiones de GNU, se puede inicializar un rango de elementos del mismo valor, especificando el primero y ultimo indices, en la forma [primero] ... [ultimo]. Aquí un ejemplo:
+
+```
+int mi_arreglo[100] = { [0 ... 9] = 1, [10 ... 98] = 2, 3 };
+```
+
+Eso inicializa los elementos de 0 hasta 9 en 1, los elementos 10 hasta 98 en 2, y el elemento 99 en 3. (También se puede escribir explícitamente `[99] = 3'.) También nota que se deben dejar espacios en ambos lados de `'...'`.
+
+Si inicializas cada elemento de un arreglo, entonces no necesitas especificar el tamaño; su tamaño está determinado por el número de elementos que inicializas. Aquí hay un ejemplo:
+
+
+```
+int mi_arreglo[] = { 0, 1, 2, 3, 4 };
+```
+
+Aunque esto no indica explícitamente que el arreglo tiene cinco elementos utilizando `mi_arreglo[5]`, se inicializan cinco elementos, por lo que es el número que tiene.
+
+Alternativamente, que elementos inicializar, entonces el tamaño del arreglo es igual al número inicializado más alto, más uno. Por ejemplo:
+
+```
+int mi_arreglo[] = { 0, 1, 2, [99] = 99 };
+```
+
+En ese ejemplo, solo cuatro elementos son inicializados, pero el último elemento inicializado es el número 99, así que hay 100 elementos.
+
+===
+
+### 2.5.3 Accediendo a los elementos del Arreglo ###
+
+Se puede acceder a los elementos del arreglo al especificar el nombre del arreglo, seguido por el índice del elemento, encerrado por corchetes. Recuerda que los elementos de un arreglo están numerados comenzando por cero. Aquí hay un ejemplo:
+
+```
+mi_arreglo[0] = 5;
+```
+
+Eso asigna el valor 5 a el primer elemento en el arreglo, en la posición cero. Se puede tratar a los elementos de un arreglo como variables individuales de cualquier tipo de dato que compone a el arreglo. Por ejemplo, si se tiene un arreglo de un tipo de dato estructura, se puede acceder a los elementos de la estructura así:
+
+```
+struct punto
+{
+  int x, y;
+};
+
+struct punto punto_arreglo[2] = { {4, 5}, {8, 9} };
+punto_arreglo[0].x = 3;
+```
 
 ===
 
