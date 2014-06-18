@@ -575,9 +575,9 @@ Si se desea omitir el relleno de un tipo estructura (lo cuál reducirá el acces
 
 Un arreglo es una estructura de datos que permite almacenar uno o más elementos consecutivamente en memoria. En C,los elementos del arreglo comienzan el índice en la posición zero no uno.
 
-- Declarando arreglos
-- Inicializando Arreglos
-- Accediendo a los elementos del Arreglo
+- [Declarando arreglos](#251-declarando-arreglos)
+- [Inicializando Arreglos](#252-inicializando-arreglos)
+- [Accediendo a los elementos del Arreglo](#253-accediendo-a-los-elementos-del-arreglo)
 - Arreglos multidimensionales
 - Arreglos como cadenas
 - Arreglos de uniones
@@ -702,6 +702,59 @@ struct punto
 struct punto punto_arreglo[2] = { {4, 5}, {8, 9} };
 punto_arreglo[0].x = 3;
 ```
+===
+
+### 2.5.4 Arreglos multidimensionales ###
+
+Se pueden hacer arreglos multidimensionales, o "arreglos de arreglos". Esto se hace al agregar un par conjunto extra de corchetes y la longitud para cada dimensión adicional que quieres que tenga el arreglo. Por ejemplo, aquí esta una declaración para un arreglo de dos dimensiones que almacena cinco elementos en cada dimensión (un arreglo de dos elementos que consiste en arreglos de cinco elementos):
+
+```
+int dos_dimensiones[2][5] = { {1, 2, ,3, 4, 5}, {6, 7, 8, 9, 10} };
+```
+
+Arreglos multidimensionales son accedidos especificando el índice deseado en ambas dimensiones:
+
+```
+dos_dimensiones[1][3] = 12;
+```
+
+En nuestro ejemplo, `dos_dimensiones[0]` es en si mismo un arreglo. El elemento `dos_dimensiones[0][2]` es seguido por `dos_dimensiones[0][3]` no por `dos_dimensiones[1][2]`.
 
 ===
 
+### 2.5.5 Arreglos como cadenas ###
+
+Se pueden utilizar un arreglo de caracteres para almacenar una cadena (ver [Constantes de Cadenas](https://github.com/mitogh/Manual-GNU-C/blob/master/1#134-constantes-de-cadena)). El arreglo puede ser construido con signos o sin signo.
+
+Cuando declaras un arreglo, se puede especificar el número de elementos que tendrá. Ese número será el máximo número de caracteres que deben estar en la cadena, incluyendo el caracter null utilizado para terminar la cadena. Si eliges esta opción, entonces no se tiene que inicializar el arreglo cuando se declara. Alternativamente, simplemente se puede inicializar un valor a el arreglo y su tamaño será exactamente suficientemente largo para almacenar cualquier cadena para inicializarlo.
+
+Hay dos formas diferentes para inicializar un arreglo. Se puede especificar una lista de caracteres delimitados por comas encerradas por llaves, o se puede especificar una cadena literal encerrada por comillas dobles.
+
+Aquí hay algunos ejemplos:
+
+```
+char blue[26];
+char yellow[26] = { 'y', 'e', 'l', 'l', 'o', 'w', '\0'};
+char orange[26] = "orange";
+char gray[] = {'g', 'r', 'a', 'y', '\0'};
+char salmon[] = "salmon";
+```
+
+En cada uno de estos casos, el caracter nulo `\0` es incluido al final de la cadena, incluso cuando no se indique expresamente. (Tenga en cuenta que si no se inicializa una cadena mediante un arreglo de caracteres individuales, entonces no se garantiza que el caracter nulo este presente. Podría ser, pero tal evento sería una casualidad, y no se debe confiar en ella.)
+
+Después de la inicialización, no se puede asignar una nueva cadena literal a un arreglo utilizando el operador de *asignación*. Por ejemplo, esto *no funcionaria*:
+
+```
+char limon[26] = "natilla";
+limon = "salsa de carne";     /* Falla! */
+```
+
+Sin embargo, hay funciones en la biblioteca GNU C que realiza operaciones (incluyendo el copiado) en en arreglos de cadena. También puedes cambiar un caracter a la vez, accediendo a los elementos individuales de la cadena como lo harías con cualquier otro arreglo:
+
+```
+char name[] = "bob";
+name[0] = 'r';
+```
+
+Es posible que usted afirme explícitamente el número de elementos en un arreglo, y luego inicializarla utilizando una cadena que tenga más caracteres que los elementos del arreglo. Esto no es algo bueno. La cadena más grande no sobrescribe el tamaño especificado previamente del arreglo, y tendrás una advertencia en tiempo de compilación. Ya que el tamaño original se mantiene, cualquier parte de la cadena que exceda el tamaño original es escrita en una dirección de memoria para la
+cuál no fue asignada.
