@@ -578,8 +578,8 @@ Un arreglo es una estructura de datos que permite almacenar uno o más elementos
 - [Declarando arreglos](#251-declarando-arreglos)
 - [Inicializando Arreglos](#252-inicializando-arreglos)
 - [Accediendo a los elementos del Arreglo](#253-accediendo-a-los-elementos-del-arreglo)
-- Arreglos multidimensionales
-- Arreglos como cadenas
+- [Arreglos multidimensionales](#254-arreglos-multidimensionales)
+- [Arreglos como cadenas](#255-arreglos-como-cadenas)
 - Arreglos de uniones
 - Arreglos de estructuras
 
@@ -756,5 +756,72 @@ char name[] = "bob";
 name[0] = 'r';
 ```
 
-Es posible que usted afirme explícitamente el número de elementos en un arreglo, y luego inicializarla utilizando una cadena que tenga más caracteres que los elementos del arreglo. Esto no es algo bueno. La cadena más grande no sobrescribe el tamaño especificado previamente del arreglo, y tendrás una advertencia en tiempo de compilación. Ya que el tamaño original se mantiene, cualquier parte de la cadena que exceda el tamaño original es escrita en una dirección de memoria para la
-cuál no fue asignada.
+Es posible que usted afirme explícitamente el número de elementos en un arreglo, y luego inicializarla utilizando una cadena que tenga más caracteres que los elementos del arreglo. Esto no es algo bueno. La cadena más grande no sobrescribe el tamaño especificado previamente del arreglo, y tendrás una advertencia en tiempo de compilación. Ya que el tamaño original se mantiene, cualquier parte de la cadena que exceda el tamaño original es escrita en una dirección de memoria para la cuál no fue asignada.
+
+===
+
+### 2.5.6 Arreglo de uniones ###
+
+Se puede crear un arreglo de un tipo unión tal como se puede un arreglo de un tipo de dato primitivo.
+
+```
+union numeros
+{
+  int i;
+  float f;
+};
+union numeros arreglo_numero[3];
+```
+
+Ese ejemplo crea un arreglo llamado `arreglo_numero` de 3 elementos de variables `union números`. También se pueden inicializar los primeros miembros de los elementos de un arreglo:
+
+```
+struct punto punto_arreglo[3] = { {3}, {4}, {5} };
+```
+
+Las grupo de llaves internas son opcionales.
+
+Después de la inicialización todavía se puede acceder a los miembros de la unión en el arreglo utilizando el operador de acceso de miembro. Se coloca el nombre del arreglo y el número del elemento (encerrado por corchetes) a la izquierda del operador, y el nombre del miembro en la derecha.
+
+```
+union números arreglo_numero[3];
+arreglo_numero[0].i = 2;
+```
+
+===
+
+### 2.5.7 Arreglo de estructuras ###
+
+Se puede crear un arreglo de tipo estructura tal como se puede crear un arreglo de un tipo de dato primitivo.
+
+```
+struct punto
+{
+  int x, y;
+};
+struct punto arreglo_punto[3];
+```
+
+Ese ejemplo crea un arreglo llamado `arreglo_punto` de 3 elementos de variables `struct punto`. También se pueden inicializar los elementos de un arreglo de estructura.
+
+```
+struct punto punto_arreglo[3] = { {2, 3}, {4, 5}, {6, 7} };
+```
+
+Así como cuando se inicializan las estructuras que contienen miembros de estructuras, las llaves interiores son opcionales. Pero si usas las llaves adicionales, entonces se pueden inicializar parcialmente algunas de las estructuras en el arreglo e inicializar completamente otras:
+
+```
+struct punto punto_arreglo[3] = { {2}, {4, 5}, {6, 7} };
+```
+
+En ese ejemplo, el primer elemento del arreglo solo tiene inicializado el miembro `x`. Por el agrupamiento de las llaves, el valor 4 es asignado a el miembro `x` del segundo elemento del arreglo, *no* al miembro `y` del primer elemento, como sería el caso sin el grupo de llaves.
+
+Después de la inicialización, todavía se puede acceder a los miembros de la estructura en el arreglo utilizando el operador de accedo de miembro. Se coloca el nombre del arreglo y el número del elemento (encerrado por corchetes) a la izquierda del operador, y el nombre del miembro a la derecha.
+
+```
+struct punto punto_arreglo[3];
+punto_arreglo[0].x = 2;
+punto_arreglo[0].y = 3;
+```
+
+===
