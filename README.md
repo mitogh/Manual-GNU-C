@@ -49,7 +49,7 @@
     - [2.5.2 Inicializando Arreglos](2#252-inicializando-arreglos)
     - [2.5.3 Accediendo a los elementos del Arreglo](2#253-accediendo-a-los-elementos-del-arreglo)
     - [2.5.4 Arreglos multidimensionales](2#254-arreglos-multidimensionales)
-    - [2.5.5 Arreglos como cadenas](2#255-ahreglos-como-cadenas)
+    - [2.5.5 Arreglos como cadenas](2#255-arreglos-como-cadenas)
     - [2.5.6 Arreglos de uniones](2#256-arreglo-de-uniones)
     - [2.5.7 Arreglos de estructuras](2#257-arreglo-de-estructuras)
 	
