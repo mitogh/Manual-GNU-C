@@ -4,7 +4,7 @@
 - [Enumeraciones](#22-enumeraciones)
 - [Uniones](#23-uniones)
 - [Estructuras](#24-estructuras)
-- Arreglos
+- [Arreglos](#25-arreglos)
 - Punteros
 - Tipos incompletos
 - Calificadores de tipos
@@ -580,8 +580,8 @@ Un arreglo es una estructura de datos que permite almacenar uno o más elementos
 - [Accediendo a los elementos del Arreglo](#253-accediendo-a-los-elementos-del-arreglo)
 - [Arreglos multidimensionales](#254-arreglos-multidimensionales)
 - [Arreglos como cadenas](#255-arreglos-como-cadenas)
-- Arreglos de uniones
-- Arreglos de estructuras
+- [Arreglos de uniones](#256-arreglo-de-uniones)
+- [Arreglos de estructuras](#257-arreglo-de-estructuras)
 
 ===
 

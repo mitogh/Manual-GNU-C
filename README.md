@@ -44,6 +44,14 @@
 		- [2.4.3 Accediendo a los miembros de una estructura](2#243-accediendo-a-los-miembros-de-una-estructura)
 		- [2.4.4 Campos de bits](2#244-campos-de-bits)
 		- [2.4.5 Tamaño de las estructuras](2#245-tama%C3%B1o-de-las-estructuras)
+  - [2.5 Arreglos](2#25-arreglos)
+    - [2.5.1 Declarando arreglos](2#251-declarando-arreglos)
+    - [2.5.2 Inicializando Arreglos](2#252-inicializando-arreglos)
+    - [2.5.3 Accediendo a los elementos del Arreglo](2#253-accediendo-a-los-elementos-del-arreglo)
+    - [2.5.4 Arreglos multidimensionales](2#254-arreglos-multidimensionales)
+    - [2.5.5 Arreglos como cadenas](2#255-ahreglos-como-cadenas)
+    - [2.5.6 Arreglos de uniones](2#256-arreglo-de-uniones)
+    - [2.5.7 Arreglos de estructuras](2#257-arreglo-de-estructuras)
 	
 ## El manual de referencia de GNU C ##
 
