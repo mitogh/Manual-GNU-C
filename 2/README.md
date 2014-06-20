@@ -5,7 +5,7 @@
 - [Uniones](#23-uniones)
 - [Estructuras](#24-estructuras)
 - [Arreglos](#25-arreglos)
-- Punteros
+- [Punteros](#26-punteros)
 - Tipos incompletos
 - Calificadores de tipos
 - Clase de especificadores de almacenamiento
@@ -830,10 +830,10 @@ punto_arreglo[0].y = 3;
 
 Los punteros almacenan direcciones de memoria almacenadas en constantes o variables. Para cualquier tipo de dato, incluyendo ambos tipos primitivos y personalizados, se puede crear un puntero que almacene la dirección de memoria de una instancia de ese tipo. 
 
-- Declarando punteros
-- Inicialización de punteros
-- Punteros a uniones
-- Punteros a estructuras
+- [Declarando punteros](#261-declarando-punteros)
+- [Inicialización de punteros](#262-inicializaci%C3%B3n-de-punteros)
+- [Punteros a uniones](#263-punteros-a-uniones)
+- [Punteros a estructuras](#264-punteros-a-estructuras)
 
 ===
 
