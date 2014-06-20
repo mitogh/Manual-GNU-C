@@ -895,9 +895,53 @@ Es importante establecer que si no se inicializa un puntero con la dirección de
 
 ### 2.6.3 Punteros a uniones ###
 
+Puedes crear un puntero a un tipo unión tal y como se puede un puntero a un tipo de dato primitivo.
+
+```
+union numbers
+{
+  int i;
+  float f;
+};
+union numeros foo = {4};
+union numeros *numero_ptr = &foo;
+```
+
+Ese ejemplo crea un nuevo tipo, `union numeros`, y declara (y inicializa su primer miembro) una variable de ese tipo llamada `foo`. Finalmente, declara un puntero del tipo `union numeros`, y le otorga la dirección de `foo`.
+
+Puedes acceder a los miembros de una variable de union a través de un puntero, pero no se pueden utilizar más el operador regular de acceso a miembros. En su lugar, tienes que utilizar el operador de acceso indirecto a miembros (ver Expresiones de acceso a miembros). Continuando con el ejemplo anterior, el siguiente ejemplo cambiará el valor del primer miembro de `foo`:
+
+```
+numbero_ptr -> i = 450;
+```
+
+Ahora el miembro `i` en `foo`es 450.
+
 ===
 
 ### 2.6.4 Punteros a estructuras ###
+
+Puedes crear un puntero a un tipo estructura tal y como se puede un puntero a un tipo de dato primitivo.
+
+```
+struct pescado
+{
+  float longitud, peso;
+};
+struct pescado salmon = {4.3, 5.8};
+struct pescado *pescado_ptr = &salmon;
+```
+
+Ese ejemplo crea un nuevo estructura del tipo, `struct pescado`, y declara (y inicializa) una variable de ese tipo llamada `salmon`. Finalmente, declara un puntero al tipo `struct pescado`, y le otorga la dirección de `salmon`.
+
+Puedes acceder a los miembros de una variable de estructura a través ed un puntero, pero no se pueden utilizar más el operador regular de acceso a miembros. En su lugar, tienes que utilizar el operador de acceso indirecto a miembros (Ver Expresiones de acceso a miembros). Continuando con el ejemplo anterior, el siguiente ejemplo cambiará los valores de los miembros de `salmon`:
+
+```
+pescado_ptr -> longitud = 5.1;
+pescado_ptr -> peso = 6.2;
+```
+
+Ahora los miembros `longitud` y el `peso` en `salmon` son 5.1 y 6.2 respectivamente.
 
 ===
 
