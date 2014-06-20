@@ -52,6 +52,11 @@
     - [2.5.5 Arreglos como cadenas](2#255-arreglos-como-cadenas)
     - [2.5.6 Arreglos de uniones](2#256-arreglo-de-uniones)
     - [2.5.7 Arreglos de estructuras](2#257-arreglo-de-estructuras)
+  - [2.6 Punteros](2#26-punteros)
+    - [2.6.1 Declarando punteros](2#261-declarando-punteros)
+    - [2.6.2 Inicialización de punteros](2#262-inicializaci%C3%B3n-de-punteros)
+    - [2.6.3 Punteros a uniones](2#263-punteros-a-uniones)
+    - [2.6.4 Punteros a estructuras](2#264-punteros-a-estructuras)
 	
 ## El manual de referencia de GNU C ##
 
