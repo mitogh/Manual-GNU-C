@@ -825,3 +825,79 @@ punto_arreglo[0].y = 3;
 ```
 
 ===
+
+## 2.6 Punteros ##
+
+Los punteros almacenan direcciones de memoria almacenadas en constantes o variables. Para cualquier tipo de dato, incluyendo ambos tipos primitivos y personalizados, se puede crear un puntero que almacene la dirección de memoria de una instancia de ese tipo. 
+
+- Declarando punteros
+- Inicialización de punteros
+- Punteros a uniones
+- Punteros a estructuras
+
+===
+
+### 2.6.1 Declarando punteros ###
+
+Un puntero se declara especificando un nombre para él y un tipo de dato. El tipo de dato indica que tipo de variable el punteros almacenara en memoria.
+
+Para declarar un puntero, se incluye el operador de indirección (ver Operadores de punteros) antes del identificador. Aquí esta la forma general de una declaración de un puntero:
+
+```
+tipo-dato * nombre;
+```
+
+El espacio en blanco no es significante al rededor del operador de indirección:
+
+```
+tipo-dato *nombre;
+tipo-dato* nombre;
+```
+
+Aquí está un ejemplo de la declaración de un ejemplo que almacena la dirección de una variable `int`.
+
+```
+int *ip;
+```
+
+Debes ser cuidadoso: cuando se declaran multiples punteros en la misma sentencia, debes declarar cada uno como un puntero, utilizando el operador de indirección.
+
+```
+int *foo, *bar;   /* Dos punteros */
+int *baz, quuz;   /* Un puntero y una variable entera */
+```
+
+===
+
+### 2.6.2 Inicialización de punteros ###
+
+Se puede inicializar un puntero la primera vez que se declara especificando una dirección variable para almacenar en el. Por ejemplo, el código siguiente declara una variable `int 'i'`, y un puntero que se inicializa con la dirección de 'i'.
+
+```
+int i;
+int *ip = &i;
+```
+
+Se puede dar cuenta del uso del operador de dirección (ver Operadores de puntero), utilizado para obtener la dirección de memoria de una variable. Después de declarar un puntero, no se utiliza el operador de indirección con el nombre del puntero cuando se le asigna una nueva dirección a apuntar. Por el contrario, eso cambiará el valor de la variable a la que apunta, no el valor del puntero en si mismo. Por ejemplo:
+
+```
+int i, j;
+int *ip = &i;   /* 'ip' ahora almacena la dirección de 'i' */
+ip = &j;        /* 'ip' ahora almacena la dirección de 'j' */
+*ip = &i;       /* 'j' ahora almacena la dirección de 'i' */
+```
+
+El valor almacenado en un puntero es un numero entero: una posición en el espacio de memoria de la computadora. Si usted está dispuesto a hacerlo, puede asignar valores explícitamente utilizando literales enteras, arrojándolos al tipo de puntero adecuado. Sin embargo, no recomendamos esta práctica a menos que usted necesite tener un control muy afinado sobre lo que es´ta almacenando la memoria, y sabe exactamente lo que esta haciendo. Es demasiado fácil sobreescribir accidentalmente algo que usted no tenia intención de hacer. La mayoría de los usos de esta técnica no  son portables
+
+Es importante establecer que si no se inicializa un puntero con la dirección de un objeto existente, apuntara a nada en particular y hará que tu programa truene si se utiliza (formalmente, este tipo de cosas se llama *comportamiento indefinido*).
+
+===
+
+### 2.6.3 Punteros a uniones ###
+
+===
+
+### 2.6.4 Punteros a estructuras ###
+
+===
+
