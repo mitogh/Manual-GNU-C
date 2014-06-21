@@ -336,7 +336,7 @@ union numeros
 
 ### 2.3.3 Accediendo a los miembros de una unión ###
 
-Se puede acceder a los miembros de una variable de una unión usando el operador de miembro. Se coloca le nombre de la variable unión en el lado izquierdo del operador, y el nombre del miembro en el lado derecho.
+Puedes acceder a los miembros de una variable de una unión usando el operador de miembro. Se coloca le nombre de la variable unión en el lado izquierdo del operador, y el nombre del miembro en el lado derecho.
 
 ```
 union numeros
@@ -413,7 +413,7 @@ Puedes declarar variables del tipo estructuras ya sea durante la definición ini
 
 #### 2.4.2.1 Declarando variables de estructura en la definición ###
 
-Se pueden declarar variables del tipo estructura cuando se define el tipo estructura colocando los nombres de las variables después de la llave de cierre de la estructura, pero antes del punto y coma final. Se pueden declarar más de un nombre separando los nombres con comas.
+Puedes declarar variables del tipo estructura cuando se define el tipo estructura colocando los nombres de las variables después de la llave de cierre de la estructura, pero antes del punto y coma final. Se pueden declarar más de un nombre separando los nombres con comas.
 
 ```
 struct punto
@@ -428,7 +428,7 @@ Ese ejemplo declara dos variables del tipo `struct punto`, `primer_punto` y `seg
 
 #### 2.4.2.2 Declarando variables de estructura después de la definición ###
 
-Se pueden declarar variables del tipo estructura después de la definición del tipo estructura utilizando la palabra clave `struct` y el nombre que le hayas dado al tipo estructura, seguido por uno o más nombres de variables separados por comas.
+Puedes declarar variables del tipo estructura después de la definición del tipo estructura utilizando la palabra clave `struct` y el nombre que le hayas dado al tipo estructura, seguido por uno o más nombres de variables separados por comas.
 
 ```
 struct punto
@@ -508,7 +508,7 @@ Ese ejemplo define la estructura `rectangulo` que consiste de dos variables estr
 
 ### 2.4.3 Accediendo a los miembros de una estructura ###
 
-Puedes a los miembros de una variable estructura utilizando el operador de acceso a los miembros. Se coloca el nombre de la variable estructura del lado izquierdo del operador, y el nombre del miembro en el lado derecho.
+Puedes acceder a los miembros de una variable estructura utilizando el operador de acceso a los miembros. Se coloca el nombre de la variable estructura del lado izquierdo del operador, y el nombre del miembro en el lado derecho.
 
 ```
 struct punto
@@ -945,3 +945,49 @@ Ahora los miembros `longitud` y el `peso` en `salmon` son 5.1 y 6.2 respectivame
 
 ===
 
+## 2.7 Tipos incompletos ##
+
+Puedes definir estructuras, uniones, y enumeraciones sin listar sus miembros (o valores, en el caso de las enumeraciones). Haciendo eso resulta un tipo incompleto. No se pueden declarar variables de tipos incompletos, pero se pueden trabajar con punteros a esos tipos.
+
+```
+struct punto;
+```
+
+En algún momento más tarde en tu programa, quieras completar el tipo. Esto se hace como normalmente se haría:
+
+```
+struct punto
+{
+  int x, y;
+};
+```
+
+Esta técnica es normalmente para listas enlazadas:
+
+```
+struct lista_enlazada_simple
+{
+  struct lista_enlazada_simple *siguiente;
+  int x;
+  /* Quizá otro miembro aquí */
+};
+struct lista_enlazada_simple *cabeza_de_lista;
+```
+
+## 2.8 Tipos de calificadores ##
+
+Hay dos tipos de calificadores que puedes agregar al inicio de tu declaración de tu variable lo que cambiará como la variable puede ser accedida: `const` y `volatile`. 
+
+`const` causa que la variable sea de solo lectura, después de su inicialización, su valor no debe ser cambiado.
+
+```
+const float pi = 3.14159f;
+```
+
+Además de ayudar a prevenir cambios accidentales de valor, la declaración de variables con `const` puede ayudar al compilador en la optimización de código. 
+
+`volatile` le dice al compilador que la variable es explícitamente intercambiable, y accesos aparenteme inútiles de la variable (por ejemplo, a través de punteros) no pueden ser optimizados a la distancia. Usted puede utilizar las variables volátiles para almacenar los datos que se actualiza a través de devoluciones de llamada a funciones o manejadores de señal. Puntos de secuencia y de entrega de señal.o
+
+```
+volatile float temperaturaActual = 40.0;
+```
