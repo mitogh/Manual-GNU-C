@@ -6,8 +6,8 @@
 - [Estructuras](#24-estructuras)
 - [Arreglos](#25-arreglos)
 - [Punteros](#26-punteros)
-- Tipos incompletos
-- Calificadores de tipos
+- [Tipos incompletos](#27-tipos-incompletos)
+- [Tipos de calificadores](#28-tipos-de-calificadores)
 - Clase de especificadores de almacenamiento
 - Renombrado de tipos
 
@@ -397,7 +397,7 @@ struct punto
 
 Eso define un tipo de estructura llamada `struct punto`, la cuál contiene dos miembros `X` y `Y` ambas del tipo `int`.
 
-Las estructuras (y uniones) pueden contener instancias de otras estructuras y uniones,pero por supuesto no así mismas. Es posible para una estructura o un tipo unión contener un campo que sea un puntero a el mismo tipo (mira Tipos Incompletos).
+Las estructuras (y uniones) pueden contener instancias de otras estructuras y uniones,pero por supuesto no así mismas. Es posible para una estructura o un tipo unión contener un campo que sea un puntero a el mismo tipo ([mira Tipos incompletos](#28-tipos-de-calificadores)).
 
 ===
 

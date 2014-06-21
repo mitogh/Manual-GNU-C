@@ -57,6 +57,8 @@
     - [2.6.2 Inicialización de punteros](2#262-inicializaci%C3%B3n-de-punteros)
     - [2.6.3 Punteros a uniones](2#263-punteros-a-uniones)
     - [2.6.4 Punteros a estructuras](2#264-punteros-a-estructuras)
+  - [2.7 Tipos incompletos](2#27-tipos-incompletos)
+  - [2.8 Tipos de calificadores](2#28-tipos-de-calificadores)
 	
 ## El manual de referencia de GNU C ##
 
