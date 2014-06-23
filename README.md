@@ -61,6 +61,8 @@
   - [2.8 Tipos de calificadores](2#28-tipos-de-calificadores)
   - [2.9 Clase de especificadores de almacenamiento](2#29-clase-de-especificadores-de-almacenamiento)
   - [2.10 Renombrado de tipos](2#210-renombrar-tipos)
+- [3 Expresiones y Operadores](3#3-expresiones-y-operadores)
+	- [3.1 Expresiones](3#31-expresiones)
 	
 ## El manual de referencia de GNU C ##
 

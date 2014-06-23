@@ -1,6 +1,6 @@
 # 3 Expresiones y operadores #
 
-- Expresiones
+- [Expresiones](#31-expresiones)
 
 ===
 
