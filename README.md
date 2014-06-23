@@ -59,8 +59,8 @@
     - [2.6.4 Punteros a estructuras](2#264-punteros-a-estructuras)
   - [2.7 Tipos incompletos](2#27-tipos-incompletos)
   - [2.8 Tipos de calificadores](2#28-tipos-de-calificadores)
-  - [2.9 Clase de especificadores de almacenamiento](#29-clase-de-especificadores-de-almacenamiento)
-  - [2.10 Renombrado de tipos](#210-renombrar-tipos)
+  - [2.9 Clase de especificadores de almacenamiento](2#29-clase-de-especificadores-de-almacenamiento)
+  - [2.10 Renombrado de tipos](2#210-renombrar-tipos)
 	
 ## El manual de referencia de GNU C ##
 
