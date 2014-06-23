@@ -8,8 +8,8 @@
 - [Punteros](#26-punteros)
 - [Tipos incompletos](#27-tipos-incompletos)
 - [Tipos de calificadores](#28-tipos-de-calificadores)
-- Clase de especificadores de almacenamiento
-- Renombrado de tipos
+- [Clase de especificadores de almacenamiento](#29-clase-de-especificadores-de-almacenamiento)
+- [Renombrado de tipos](#210-renombrar-tipos)
 
 ===
 
@@ -446,7 +446,7 @@ Ese ejemplo declara dos variables del tipo `struct punto`, `primer_punto` y `seg
 
 Se pueden inicializar los miembros del tipo estructura para que tengan ciertos valores cuando declaras las variables de la estructura.
 
-Si no se inicializa una variable estructura, el efecto depende si tiene almacenamiento estático (ver Almacenamiento de especificados de clase) o no. Si es, miembros con tipos integrales son inicializados con 0 y miembros punteros son inicializados con NULL; de otro modo, el valor de los miembros de una estructura es indeterminado.
+Si no se inicializa una variable estructura, el efecto depende si tiene almacenamiento estático (ver [Clase de especificadores de almacenamiento](#29-clase-de-especificadores-de-almacenamiento)) o no. Si es, miembros con tipos integrales son inicializados con 0 y miembros punteros son inicializados con NULL; de otro modo, el valor de los miembros de una estructura es indeterminado.
 
 Una forma de inicializar una estructura es especificar en un conjunto de llaves y separadas por comas. Aquellos valores son asignados a los miembros de la estructura en el mismo orden que los miembros que son declarados en la definición de la estructura. 
 
