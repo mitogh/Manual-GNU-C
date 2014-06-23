@@ -991,3 +991,51 @@ Además de ayudar a prevenir cambios accidentales de valor, la declaración de v
 ```
 volatile float temperaturaActual = 40.0;
 ```
+
+## 2.9 Clase de especificadores de almacenamiento ##
+
+Existen cuatro especificadores de almacenamiento de clase que puedes agregar al inicio de las declaraciones de tus variables, lo que cambia como son almacenadas las variables en la memoria: `auto, extern, register,` y `static`.
+
+Se utiliza `auto` para variables que son locales a una función, y esos valores deben ser descartados a su regreso de la función en la que han sido declarados. Este es el comportamiento predeterminado para las variables declaradas dentro de las funciones.
+
+```
+void
+foo (int valor)
+{
+  auto int x = valor;
+  ...
+  return;
+}
+```
+
+`register` es casi idéntico al propósito de `auto`, excepto que sugiere al compilador que la variable será usada extensamente, y si es posible debería ser almacenada en un registro. No se puede utilizar el operador de dirección para obtener la dirección de una variable declarada con un registro. Esto significa que no se pueden hacer referencia a los elementos de un arreglo declarado con los especificadores de almacenamiento `register`. De hecho la única cosa que se puede hacer con un arreglo es medir su tamaño  con `sizeof`. GCC normalmente toma buenas decisiones sobre que valores se deben almacenar en un registro, así que `register` no es usado a menudo.
+
+Esencialmente `static` es lo opuesto de `auto`: cuando se utiliza en variables dentro de una función o un bloque, estas variables retienen su valor incluso cuando la función o bloque es terminado. Esto es conocido como *duración estática de almacenamiento*.
+
+```
+int
+suma(int x)
+{
+  static int sumaHastaAhora = 0;
+  sumaHastaAhora = sumaHastaAhora + x;
+  return sumaHastaAhora;
+}
+```
+
+También puedes declarar variables (o funciones) en el nivel superior (es decir, no dentro de una función) para ser estáticas; estas variables son visibles(global) para el archivo fuente actual (pero no para otros archivos). Por desgracia esto otorga un doble significado al significado de `static`; este segundo significado es conocido como *vinculación estática*. Dos funciones o variables que tienen vinculación estática en archivos separadas están totalmente separadas; tampoco es visible fuera del archivo en la que se ha declarado.
+
+Variables sin inicializar que son declaradas como `extern` obtienen el valor por defecto de 0,0,0 o NULL, dependiendo del tipo. Variables sin inicializar que son declaradas como `auto` o `register` (incluyendo el uso predeterminado de `auto`) se quedan sin inicializar, y por lo tanto no se debe asumir que almacenan un valor en particular.
+
+`extern`es util para declarar variables que quieres que sean visibles para todos los archivos fuente que están enlazados en tu proyecto. No puedes inicializar una variable en una declaración `extern`, ya que ningún espacio ha sido reservado durante la declaración. Tu debes hacer ambas una declaración `extern` (comúnmente en un archivo de cabecera que es incluido por otros archivos fuente que necesitan acceder a la variable) y una declaración no `extern` que es cuando el espacio es reservado para almacenar la variable. La declaración `extern` puede repetirse muchas veces. 
+
+```
+extern int numeroDeClientes;
+...
+int numeroDeClientes = 0;
+```
+
+Ver Estructura del programa y ámbito de aplicación, para información relacionada.
+
+## 2.10 Renombrar tipos ##
+
+En ocasiones es conveniente dar un nuevo nombre a un tipo. Esto se puede realizar utilizando la sentencia `typedef`. Ver La sentencia typedef, para más información.
