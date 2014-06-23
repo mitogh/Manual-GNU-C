@@ -9,7 +9,7 @@
 - [Tipos incompletos](#27-tipos-incompletos)
 - [Tipos de calificadores](#28-tipos-de-calificadores)
 - [Clase de especificadores de almacenamiento](#29-clase-de-especificadores-de-almacenamiento)
-- [Renombrado de tipos](#210-renombrar-tipos)
+- [Renombrar de tipos](#210-renombrar-tipos)
 
 ===
 
