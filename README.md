@@ -63,6 +63,7 @@
   - [2.10 Renombrado de tipos](2#210-renombrar-tipos)
 - [3 Expresiones y Operadores](3#3-expresiones-y-operadores)
 	- [3.1 Expresiones](3#31-expresiones)
+	- [3.2 Operadores de asignación](3#32-operadores-de-asignaci%C3%B3n)
 	
 ## El manual de referencia de GNU C ##
 
