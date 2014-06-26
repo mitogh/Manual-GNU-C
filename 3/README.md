@@ -3,6 +3,7 @@
 - [Expresiones](#31-expresiones)
 - [Operadores de asignación](#32-operadores-de-asignaci%C3%B3n)
 - [Incremento y reducción](#33-incremento-y-reducci%C3%B3n)
+- [Operadores aritméticos]()
 
 ===
 
@@ -128,5 +129,89 @@ x--;        /* x ahora es 4 */
 ```
 
 Los conceptos de la aplicación de prefijo y sufijo aplican también aquí como en el operador de incremento.
+
+===
+
+## 3.4 Operadores aritméticos ##
+
+C otorga operadores para operaciones aritméticas estándar: suma, resta, multiplicación, y división, junto con división modular y negación. El uso de estos operadores es muy simple; aquí hay algunos ejemplos:
+
+```
+/* Suma */
+x = 5 + 3;
+y = 10.23 + 37.332;
+quux_puntero = foo_puntero + bar_puntero;
+
+/* Resta */
+x = 5 - 3;
+y = 10.23 - 37.332;
+quux_puntero = foo_puntero - bar_puntero;
+```
+
+Se pueden sumar y restar punteros de la memoria, pero no se pueden multiplicar o dividir.
+
+```
+/* Multiplicación */
+x = 5 * 3;
+y = 10.23 * 37.332;
+/* División */
+x = 5 / 3;
+y = 10.23 / 37.332;
+```
+
+La división entera de valores positivos trunca a cero, por lo que 5/3 es 1. Sin embargo, si alguno de los operandos es negativo, la dirección del redondeo esta definida por la implementación. Divisiones enteras con signo para información acerca del desbordamiento en la división entera con signo.
+
+Puedes utilizar el operador de modulo % para obtener el residuo producido al dividir dos operandos. Se colocan los operandos en cada lado del operador, e importa que operando va en que lado: `3 % 5` y `5 % 3` no arrojan el mismo resultado. Los operandos deben ser expresiones de un tipo de dato primitivo.
+
+```
+/* División modular */
+x = 5 % 3;
+y = 74 % 47;
+```
+
+La división modular regresa el residuo producido después de realizar la división entera en los dos operandos. Los operandos deben ser de un de un tipo primitivo entero.
+
+```
+/* Negación */
+int x = -5;
+float y = -3.14159;
+```
+
+Si el operando que utilizas con el operador negativo es de un tipo de dato sin signo, entonces el resultado no puede tener negativos, si no que es el valor máximo del tipo de dato sin signo, menos el valor del operando.
+
+Muchos sistemas utilizan dos complementos aritméticos, y en tales sistemas el valor más negativo de un tipo con signo puede almacenar más lejos de cero que muchos de los valores positivos. Por ejemplo, en una plataforma, este programa:
+
+```
+#include <limits.h>
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+int x;
+    x = INT_MAX;
+    printf("INT_MAX  = %d\n", x);
+    x = INT_MIN;
+    printf("INT_MIN  = %d\n", x);
+    x = -x;
+    printf("-INT_MIN = %d\n", x);
+    return 0;
+}
+```
+
+Produce este resultado:
+
+```
+INT_MAX  = 2147483647
+INT_MIN  = -2147483648
+-INT_MIN = -2147483648
+```
+
+Trivialmente se puede aplicar un operador positivo a una expresión numérica:
+
+```
+int x = +42;
+```
+
+Se asume que los valores numéricos son positivos a menos que explícitamente sean negativos, así que este operador no tiene efecto en un la ejecución de un programa.
 
 ===
