@@ -65,7 +65,7 @@
 	- [3.1 Expresiones](3#31-expresiones)
 	- [3.2 Operadores de asignación](3#32-operadores-de-asignaci%C3%B3n)
 	- [3.3 Incremento y reducción](3#33-incremento-y-reducci%C3%B3n)
-	- [3.4 Operadores aritméticos]()
+	- [3.4 Operadores aritméticos](3#34-operadores-aritm%C3%A9ticos)
 	
 ## El manual de referencia de GNU C ##
 

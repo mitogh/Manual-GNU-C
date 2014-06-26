@@ -3,7 +3,7 @@
 - [Expresiones](#31-expresiones)
 - [Operadores de asignación](#32-operadores-de-asignaci%C3%B3n)
 - [Incremento y reducción](#33-incremento-y-reducci%C3%B3n)
-- [Operadores aritméticos]()
+- [Operadores aritméticos](#34-operadores-aritm%C3%A9ticos)
 
 ===
 
