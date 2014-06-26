@@ -2,6 +2,7 @@
 
 - [Expresiones](#31-expresiones)
 - [Operadores de asignación](#32-operadores-de-asignaci%C3%B3n)
+- [Incremento y reducción]()
 
 ===
 
@@ -82,3 +83,50 @@ x = x + y;
 ```
 
 ==
+
+## 3.3 Incremento y reducción ##
+
+El operador de incremento ++ agrega 1 a su operando. El operando debe ser cualquier variable de uno de los tipos de datos primitivos, un puntero o una variable de una enumeración. Se puede aplicar el operador de incremento antes o después de la operación. Aquí hay algunos ejemplos:
+
+```
+char w = '1';
+int x = 5;
+char y = 'B';
+float z = 5.2;
+int *p = &x;
+
+++w;  /* w ahora es el caracter '2' (no el valor 2) */
+x++;  /* x ahora es 6 */
+++y;  /* y ahora es 'C' (en sistemas ASCII) */
+z++;  /* z ahora es 6.2 */
+++p;  /* p ahora es &x + sizeof(int). */
+```
+
+(Nota que el incremento en un puntero solo tiene sentido si tienes una razón para creer que el nuevo puntero será una dirección de memoria valida.)
+
+El prefijo del incremento agrega 1 antes de que el operando sea evaluado. Un sufijo de incremento  agrega 1 después de la evaluación del operando. En los ejemplos anteriores, el cambio de la posición del operador no hará ninguna diferencia. Sin embargo hay casos hace alguna diferencia:
+
+```
+int x = 5;
+printf("%d \n", x++);   /* Imprime x y después la incrementa */
+/* x ahora es igual a 6 */
+printf("%d \n", ++x);   /* Incrementa x y luego la imprime */ 
+```
+
+El resultado del ejemplo anterior es:
+
+```
+5
+7
+```
+
+Igualmente, puedes restar 1 de un operando utilizando el operador de decremento:
+
+```
+int x = 5;
+x--;        /* x ahora es 4 */
+```
+
+Los conceptos de la aplicación de prefijo y sufijo aplican también aquí como en el operador de incremento.
+
+===
