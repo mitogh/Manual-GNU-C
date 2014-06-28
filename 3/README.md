@@ -266,7 +266,7 @@ Más allá de la igualdad o desigualdad, hay operadores que puedes utilizar para
 if (x < y)
   puts("x es menor que y");
 
-if (x < y)
+if (x <= y)
   puts("x es menor o igual que y");
 
 if (x > y)
