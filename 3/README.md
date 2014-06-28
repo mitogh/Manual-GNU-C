@@ -4,8 +4,8 @@
 - [Operadores de asignación](#32-operadores-de-asignaci%C3%B3n)
 - [Incremento y reducción](#33-incremento-y-reducci%C3%B3n)
 - [Operadores aritméticos](#34-operadores-aritm%C3%A9ticos)
-- [Conjugación compleja]()
-- [Operadores de comparación]()
+- [Conjugación compleja](#35-conjugaci%C3%B3n-compleja)
+- [Operadores de comparación](#36-operadores-de-comparaci%C3%B3n)
 
 ===
 
