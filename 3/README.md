@@ -4,6 +4,8 @@
 - [Operadores de asignación](#32-operadores-de-asignaci%C3%B3n)
 - [Incremento y reducción](#33-incremento-y-reducci%C3%B3n)
 - [Operadores aritméticos](#34-operadores-aritm%C3%A9ticos)
+- [Conjugación compleja]()
+- [Operadores de comparación]()
 
 ===
 
@@ -213,5 +215,66 @@ int x = +42;
 ```
 
 Se asume que los valores numéricos son positivos a menos que explícitamente sean negativos, así que este operador no tiene efecto en un la ejecución de un programa.
+
+===
+
+## 3.5 Conjugación compleja ##
+
+Como una extensión de GNU, se puede utilizar el operador de conjugación compleja ~ para realizar conjugación compleja en su operando -- es decir, se invierte el signo de su parte imaginaria. El operando debe ser una expresión de un tipo de número complejo. Aquí esta un ejemplo:
+
+```
+__complex__ int x = 5 + 17i;
+
+printf("%d \n", (x * ~x));
+```
+
+Ya que un número imaginario (a + bi) multiplicado por su conjugado es igual a a^2 + b^2, la sentencia `printf`de arriba imprimirá 314 que es igual a 25 + 289.
+
+===
+
+## 3.6 Operadores de comparación ##
+
+Los operadores de comparación se utilizan para determinar como dos operandos están relacionados el uno del otro: son iguales a cada uno, el resultado es 1 o 0, significando verdadero o falso, respectivamente.
+
+(En los siguientes ejemplos de código, las variables x e y representan las dos expresiones de tipos aritméticos, o punteros.)
+
+El operador de igual == prueba sus dos operandos en igualdad. El resultado es 1 si los operandos son iguales, y 0 si los operandos no son iguales.
+
+```
+if (x == y)
+  puts("x no es igual a y");
+else
+  puts("x no es igual a y");
+```
+
+El operador de desigualdad != prueba dos operandos por su desigualdad. El resultado es 1 si los operandos no son iguales, y 0 si los operandos son iguales.
+
+```
+if ( x != y )
+  puts("x no es igual a y");
+else
+  puts("x no s igual a y");
+```
+
+Para comparar valores flotantes para una igualdad exacta o desigualdad puede producir resultados inesperados. [Números de tipo real](https://github.com/mitogh/Manual-GNU-C/blob/master/2#212-n%C3%BAmeros-de-tipo-real) para más información.
+
+Puedes comparar la igualdad o desigualdad de punteros de funciones; la prueba compara si dos punteros apuntan a la misma función.
+
+Más allá de la igualdad o desigualdad, hay operadores que puedes utilizar para probar si un valor es menor, o mayor que, menor o igual que, o mayor o igual que otro valor. Aquí hay algunos ejemplos de código para ejemplificar el uso de estas operaciones.
+
+```
+if (x < y)
+  puts("x es menor que y");
+
+if (x < y)
+  puts("x es menor o igual que y");
+
+if (x > y)
+  puts("x es mayor que y");
+
+if (x >= y)
+  puts("x es mayor o igual que y");
+
+```
 
 ===
