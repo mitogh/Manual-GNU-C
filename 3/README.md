@@ -6,6 +6,7 @@
 - [Operadores aritméticos](#34-operadores-aritm%C3%A9ticos)
 - [Conjugación compleja](#35-conjugaci%C3%B3n-compleja)
 - [Operadores de comparación](#36-operadores-de-comparaci%C3%B3n)
+- [Operadores lógicos]()
 
 ===
 
@@ -278,3 +279,40 @@ if (x >= y)
 ```
 
 ===
+
+## 3.7 Operadores lógicos ##
+
+Los operadores lógicos prueban el valor verdadero de un par de operadores. Cualquier expresión no cero es considerada verdadera en C, mientras una expresión que es evaluada a cero es considerada falsa. 
+
+El operador lógico de conjunción && prueba si dos expresiones son verdaderas. Si la primera expresión es falsa, entonces la segunda expresión no es evaluada.
+
+```
+if((x == 5) && (y == 10))
+  printf("x es 5 y y es 10");
+```
+
+El operador lógico de conjunción || prueba si al menos uno de las dos expresiones es verdadera. Si la primera expresión es verdadera, entonces la segunda expresión no es evaluada.
+
+```
+if((x == 5) || (y == 10))
+  printf("x es 5 o y es 10");
+```
+
+Puedes agregar al inicio de una expresión lógica un operador de negación para invertir el valor verdadero.
+
+```
+if(!(x == 5))
+  printf("x no es 5");
+```
+
+Ya que el segundo operando en pares de expresiones lógicas no siempre es evaluada, se puede escribir código con resultados un poco intuitivos.
+
+```
+if(foo && x++)
+  bar();
+```
+
+Si `foo` es siempre cero, entonces no solo impedirá que `bar` no sea llamada, pero `x` no será incrementado. Si quieres incrementar `x` sin importar el valor de `foo`, lo debes hacer afuera de la expresión de conjunción.
+
+===
+
