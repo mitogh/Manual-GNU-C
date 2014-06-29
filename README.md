@@ -68,7 +68,7 @@
 	- [3.4 Operadores aritméticos](3#34-operadores-aritm%C3%A9ticos)
   - [3.5 Conjugación compleja](3#35-conjugaci%C3%B3n-compleja)
   - [3.6 Operadores de comparación](3#36-operadores-de-comparaci%C3%B3n)
-  - [3.7 Operadores lógicos]()
+  - [3.7 Operadores lógicos](3#37-operadores-l%C3%B3gicos)
 	
 ## El manual de referencia de GNU C ##
 
