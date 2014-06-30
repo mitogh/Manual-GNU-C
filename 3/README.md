@@ -7,6 +7,7 @@
 - [Conjugación compleja](#35-conjugaci%C3%B3n-compleja)
 - [Operadores de comparación](#36-operadores-de-comparaci%C3%B3n)
 - [Operadores lógicos](#37-operadores-l%C3%B3gicos)
+- [Corrimiento de bits]()
 
 ===
 
@@ -316,3 +317,39 @@ Si `foo` es siempre cero, entonces no solo impedirá que `bar` no sea llamada, p
 
 ===
 
+## 3.8 Corrimiento de bits ##
+
+Utilizas el operador de corrimiento de bits a la izquierda `<<` para mover los bits del primer operando a la izquierda. El segundo operando denota el número lugares de bits a mover. El corrimiento de bits hacia la izquierda del valor son descartados; los nuevos bits agregados a la derecha siempre serán 0.
+
+```
+x = 47; /* 47 es 00101111 en binario */
+x << 1; /* 00101111 << 1 es 01011110 */
+```
+
+De manera similar, utilizas el operador de corrimiento de bits a la derecha `>>` para mover los bits del primer operando a la derecha. Bits desplazados a la derecha son descartados; los nuevos bits agregados en el lado izquierdo son usualmente 0, pero si es un valor negativo con signo, entonces los bits agregados pueden ser 0 o cualquier valor que estaba previamente en la position del bit más a la izquierda.
+
+```
+x = 47; /* 47 es 00101111 en binario */
+x >> 1; /* 00101111 << 1 es 00010111 */
+```
+
+Para ambos `<<` y `>>`, si el segundo operando es mayor al ancho de bits del primer operando, o el segundo operando es negativo, el comportamiento es indefinido.
+
+Puedes utilizar el corrimiento de bits para realizar una variedad de interesantes trucos. Por ejemplo, dada una fecha con el día del mes numerado como `d`, el mes numerado como `m`, y el año como `y` se puede almacenar la fecha entera en un solo número `x`. 
+
+```
+int d = 12;
+int m = 6;
+int y = 1983;
+int x = ((y << 4) + m ) << 5) + d;
+```
+
+Puedes extraer el día, mes y año original de `x` utilizando una combinación de operadores de corrimiento y división modular.
+
+```
+d = x % 32;
+m = (x >> 5) % 16;
+y = x >> 9;
+```
+
+===
