@@ -7,7 +7,8 @@
 - [Conjugación compleja](#35-conjugaci%C3%B3n-compleja)
 - [Operadores de comparación](#36-operadores-de-comparaci%C3%B3n)
 - [Operadores lógicos](#37-operadores-l%C3%B3gicos)
-- [Corrimiento de bits](#38-corrimiento-de-bits)
+- [Corrimiento de bits](#38-corrimiento-de-]bits)
+- [Operadores lógicos bit a bit]()
 
 ===
 
@@ -350,6 +351,49 @@ Puedes extraer el día, mes y año original de `x` utilizando una combinación d
 d = x % 32;
 m = (x >> 5) % 16;
 y = x >> 9;
+```
+
+===
+
+## 3.9 Operadores lógicos bit a bit ##
+
+C otorga operadores para realizar la conjunción bit a bit, disyunción inclusiva, disyunción exclusiva, y la negación (complemento).
+
+La conjunción bit a bit examina cada bit en sus dos operandos, y cuando ambos bits correspondientes son 1, el bit resultante es 1. Los demás resultados son 0. Aquí un ejemplo de como funciona, utilizando números binarios:
+
+```
+11001001 & 10011011 = 10001001
+```
+
+La disyunción inclusiva bit a bit examina cada bit en sus dos operandos, y cuando ambos bits correspondientes son ambos 0, el bit resultante es 0. Otros resultados de bit son 1.
+
+```
+11001001 | 10011011 = 11011011
+```
+
+La disyunción exclusiva bit a bit examina cada bit en sus dos operandos, y cuando los dos bits correspondientes son diferentes, el bit resultante es 1. Otros resultados son 0.
+
+```
+11001001 ^ 10011011 = 01010000
+```
+
+La negación bit a bit invierte cada bit en su operando:
+
+```
+~11001001 = 00110110
+```
+
+En C, solo puedes utilizar estos operadores con operandos de un tipo entero (o caracter), y para mayor portabilidad, solo deberías utilizar el operador de negación bit a bit con tipos sin signo. Aquí hay algunos ejemplo de la utilización de estos operadores en código C:
+
+```
+unsigned int foo = 42;
+unsigned int bar = 57;
+unsigned int quux = 42;
+
+quux = foo && bar;
+quux = foo | bar;
+quux = foo ^ bar;
+quux = ~foo;
 ```
 
 ===
