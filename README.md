@@ -70,7 +70,7 @@
   - [3.6 Operadores de comparación](3#36-operadores-de-comparaci%C3%B3n)
   - [3.7 Operadores lógicos](3#37-operadores-l%C3%B3gicos)
   - [3.8 Corrimiento de bits](3#38-corrimiento-de-bits)
-  - [3.9 Operadores lógicos bit a bit]()
+  - [3.9 Operadores lógicos bit a bit](3#39-operadores-l%C3%B3gicos-bit-a-bit)
 	
 ## El manual de referencia de GNU C ##
 

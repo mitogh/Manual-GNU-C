@@ -8,7 +8,7 @@
 - [Operadores de comparación](#36-operadores-de-comparaci%C3%B3n)
 - [Operadores lógicos](#37-operadores-l%C3%B3gicos)
 - [Corrimiento de bits](#38-corrimiento-de-]bits)
-- [Operadores lógicos bit a bit]()
+- [Operadores lógicos bit a bit](#39-operadores-l%C3%B3gicos-bit-a-bit)
 
 ===
 
