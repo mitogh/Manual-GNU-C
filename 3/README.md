@@ -397,3 +397,38 @@ quux = ~foo;
 ```
 
 ===
+
+## 3.10 Operadores de punteros ##
+
+Puedes utilizar el operador de dirección `&` para obtener la dirección de memoria de un objeto.
+
+```
+int x = 5;
+int *pointer_to_x = &x;
+```
+
+No es necesario utilizar este operador para obtener la dirección de una función, aunque puedes:
+
+```
+extern int foo(void);
+int (*fp1) (void) = foo;  /* fp1 apunta a foo */
+int (*fp2) (void) = &foo; /* fp2 también apunta a foo */
+```
+
+Los punteros a funciones y punteros de datos no son compatibles, en el sentido que no puedes esperar almacenar la dirección de una función en un puntero de dato, y luego copiar eso en un puntero de una función y llamarla sucesivamente. Puede funcionar en algunos sistemas, pero no es una técnica portable.
+
+Como una extensión de C89, también puedes obtener una dirección de una etiqueta con el operador de dirección de etiqueta `&&`. El resultado es un puntero `void*` el cuál puede ser utilizado con `goto`. See la sentencia goto.
+
+Dada una dirección de memoria almacenada en un puntero, puedes utilizar el operador de indirección `*` para obtener el valor almacenado en la dirección. (Esto es llamado `desreferenciar` el puntero.)
+
+```
+int x = 5;
+int y; 
+int *ptr;
+ptr = &x;   /* ptr ahora almacena la dirección de x */
+y = *ptr;   /* y obtiene el valor almacenado en la dirección almacenada en ptr */
+```
+
+Evita el uso de desreferenciar punteros que no han sido inicializados a una dirección de memoria conocida.
+
+===
