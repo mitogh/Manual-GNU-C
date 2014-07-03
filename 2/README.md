@@ -841,7 +841,7 @@ Los punteros almacenan direcciones de memoria almacenadas en constantes o variab
 
 Un puntero se declara especificando un nombre para él y un tipo de dato. El tipo de dato indica que tipo de variable el punteros almacenara en memoria.
 
-Para declarar un puntero, se incluye el operador de indirección (ver Operadores de punteros) antes del identificador. Aquí esta la forma general de una declaración de un puntero:
+Para declarar un puntero, se incluye el operador de indirección ([ver Operadores de punteros](https://github.com/mitogh/Manual-GNU-C/tree/master/3#310-operadores-de-punteros)) antes del identificador. Aquí esta la forma general de una declaración de un puntero:
 
 ```
 tipo-dato * nombre;
@@ -878,7 +878,7 @@ int i;
 int *ip = &i;
 ```
 
-Se puede dar cuenta del uso del operador de dirección (ver Operadores de puntero), utilizado para obtener la dirección de memoria de una variable. Después de declarar un puntero, no se utiliza el operador de indirección con el nombre del puntero cuando se le asigna una nueva dirección a apuntar. Por el contrario, eso cambiará el valor de la variable a la que apunta, no el valor del puntero en si mismo. Por ejemplo:
+Se puede dar cuenta del uso del operador de dirección ([ver Operadores de puntero](https://github.com/mitogh/Manual-GNU-C/tree/master/3#310-operadores-de-punteros)), utilizado para obtener la dirección de memoria de una variable. Después de declarar un puntero, no se utiliza el operador de indirección con el nombre del puntero cuando se le asigna una nueva dirección a apuntar. Por el contrario, eso cambiará el valor de la variable a la que apunta, no el valor del puntero en si mismo. Por ejemplo:
 
 ```
 int i, j;

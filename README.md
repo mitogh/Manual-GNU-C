@@ -71,6 +71,7 @@
   - [3.7 Operadores lógicos](3#37-operadores-l%C3%B3gicos)
   - [3.8 Corrimiento de bits](3#38-corrimiento-de-bits)
   - [3.9 Operadores lógicos bit a bit](3#39-operadores-l%C3%B3gicos-bit-a-bit)
+  - [3.10 Operadores de punteros](3#310-operadores-de-punteros)
 	
 ## El manual de referencia de GNU C ##
 
