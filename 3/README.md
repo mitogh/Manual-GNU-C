@@ -10,6 +10,7 @@
 - [Corrimiento de bits](#38-corrimiento-de-bits)
 - [Operadores lógicos bit a bit](#39-operadores-l%C3%B3gicos-bit-a-bit)
 - [Operadores de punteros](#310-operadores-de-punteros)
+- [El operador sizeof]()
 
 ===
 
@@ -431,5 +432,41 @@ y = *ptr;   /* y obtiene el valor almacenado en la dirección almacenada en ptr 
 ```
 
 Evita el uso de desreferenciar punteros que no han sido inicializados a una dirección de memoria conocida.
+
+===
+
+## 3.11 El operador sizeof ##
+
+Puedes utilizar el operador `sizeof` para obtener el tamaño (en bytes) de un tipo de dato de su operando. El operando puede ser un tipo de dato puede ser un especificador de tipo real (como `int` o `float`), así como cualquier otra expresión válida. Cuando el operando es un tipo de nombre, debe ir entre paréntesis. He aquí algunos ejemplos:
+
+```
+size_t a = sizeof(int);
+size_t b = sizeof(float);
+size_t c = sizeof(5);
+size_t d = sizeof(5.143);
+size_t e = sizeof a;
+```
+
+El resultado del operador `sizeof` es del tipo llamado `size_t`, el cuál es definido en el archivo de cabecera `<stddef.h>.size_t` es del tipo entero sin signo, quizás identico a `unsigned int` o `unsigned long int`; varia de sistema en sistema. 
+
+El tipo `size_t` es de de un tipo conveniente para el índice de un ciclo, ya que se garantiza que puede almacenar números de elementos en un arreglo; por ejemplo, este no es el caso con `int`. 
+
+El operador `sizeof`puede ser utilizado automáticamente para calcular el número de elementos en un arreglo:
+
+```
+#include <stddef.h>
+#include <stdio.h>
+
+static const int values[] = {1, 2, 48, 681}; 
+#define ARRAYSIZE(X) (sizeof x / sizeof x[0]
+
+int main(int argc, char *argv[]){
+  size_t o;
+  for(i = 0; i < ARRAYSIZE(values); i++){
+    printf("%d\n", values[i]);
+  }
+  return 0;
+}
+```
 
 ===
