@@ -10,7 +10,7 @@
 - [Corrimiento de bits](#38-corrimiento-de-bits)
 - [Operadores lógicos bit a bit](#39-operadores-l%C3%B3gicos-bit-a-bit)
 - [Operadores de punteros](#310-operadores-de-punteros)
-- [El operador sizeof]()
+- [El operador sizeof](#311-el-operador-sizeof)
 
 ===
 
