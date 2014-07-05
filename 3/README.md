@@ -11,7 +11,7 @@
 - [Operadores lógicos bit a bit](#39-operadores-l%C3%B3gicos-bit-a-bit)
 - [Operadores de punteros](#310-operadores-de-punteros)
 - [El operador sizeof](#311-el-operador-sizeof)
-- [Conversion de tipos]()
+- [Conversion de tipos](#312-conversion-de-tipos)
 
 
 ===
@@ -475,7 +475,7 @@ int main(int argc, char *argv[]){
 
 ## 3.12 Conversion de tipos ##
 
-Puedes usar una conversión de tipos explicita para que una expresión sea de un tipo especifico. Una conversión de tipos consiste en un tipo especifico encerrado por parentesis, seguido por una expresión. Para asegurar la correcta conversión, debes la expresión que sigue el tipo especificado en parentesis. Aquí hay un ejemplo:
+Puedes usar una conversión de tipos explicita para que una expresión sea de un tipo especifico. Una conversión de tipos consiste en un tipo especifico encerrado por paréntesis, seguido por una expresión. Para asegurar la correcta conversión, debes la expresión que sigue el tipo especificado en paréntesis. Aquí hay un ejemplo:
 
 ```
 float x;
@@ -484,9 +484,9 @@ int z = 3;
 x = (float) (y / z);
 ```
 
-En ese ejemplo, ya que `y` y `z` son ambas enteras, la división entera es realizada, incluso aunque `x` es una variable de punto flotante, recive el valor 2. La conversión explicita de la división a `float` no es buena, ya que el valor computado de `y/z` ya es 2.
+En ese ejemplo, ya que `y` y `z` son ambas enteras, la división entera es realizada, incluso aunque `x` es una variable de punto flotante, recibe el valor 2. La conversión explicita de la división a `float` no es buena, ya que el valor computado de `y/z` ya es 2.
 
-Para resolver este problema, necesitas convertir uno de los operandos a punto flotante antes de que la división se realizae:
+Para resolver este problema, necesitas convertir uno de los operandos a punto flotante antes de que la división se realice:
 
 ```
 float x;

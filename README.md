@@ -73,7 +73,7 @@
   - [3.9 Operadores lógicos bit a bit](3#39-operadores-l%C3%B3gicos-bit-a-bit)
   - [3.10 Operadores de punteros](3#310-operadores-de-punteros)
   - [3.11 El operador sizeof](3#311-el-operador-sizeof)
-  - [3.12 Conversion de tipos]()
+  - [3.12 Conversion de tipos](3#312-conversion-de-tipos)
 	
 ## El manual de referencia de GNU C ##
 
