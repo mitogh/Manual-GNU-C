@@ -74,6 +74,7 @@
   - [3.10 Operadores de punteros](3#310-operadores-de-punteros)
   - [3.11 El operador sizeof](3#311-el-operador-sizeof)
   - [3.12 Conversion de tipos](3#312-conversion-de-tipos)
+  - [3.13 Subindices de arreglos](3#313-subindices-de-arreglos)
 	
 ## El manual de referencia de GNU C ##
 

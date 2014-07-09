@@ -12,6 +12,8 @@
 - [Operadores de punteros](#310-operadores-de-punteros)
 - [El operador sizeof](#311-el-operador-sizeof)
 - [Conversion de tipos](#312-conversion-de-tipos)
+- [Subindices de arreglos](#313-subindices-de-arreglos)
+
 
 
 ===
