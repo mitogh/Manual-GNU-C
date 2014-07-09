@@ -508,3 +508,15 @@ foo = (struct fooType) byteArray; /* ¡Falla! */
 ```
 
 ===
+
+# 3.13 Subindices de arreglos #
+
+Puedes acceder a los elementos de un arreglo especificando el nombre del arreglo, y el subindice del arreglo (o índice, o el número del elemento). Esto significa que muchos nombres de un arreglo son igaules a punteros de expresiones. Aquí hay un ejemplo, imagina un arreglo de enteros llamado `mi_arreglo`. 
+
+```
+mi_arreglo[0] = 5;
+```
+
+La expresión de subindice del arreglo `A[i]` esta definida como una expresión identica `(*((A) + (i)))`. Esto significa que muchos de los usos de un nombre de arreglo son equivalentes a una expresión de punteros. También significa que tu no puedes tener un subindice de un arreglo teniendo el clase de almacenamiento `register`.
+
+===
