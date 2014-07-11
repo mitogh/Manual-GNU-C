@@ -75,6 +75,8 @@
   - [3.11 El operador sizeof](3#311-el-operador-sizeof)
   - [3.12 Conversion de tipos](3#312-conversion-de-tipos)
   - [3.13 Subindices de arreglos](3#313-subindices-de-arreglos)
+  - [3.14 Llamadas a funciones como expresiones](3#314-llamadas-a-funciones-como-expresiones)
+  - [3.15 El operador de coma](3#315-el-operador-de-coma)
 	
 ## El manual de referencia de GNU C ##
 
