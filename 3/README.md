@@ -511,14 +511,65 @@ foo = (struct fooType) byteArray; /* ¡Falla! */
 
 ===
 
-# 3.13 Subindices de arreglos #
+## 3.13 Subindices de arreglos ##
 
-Puedes acceder a los elementos de un arreglo especificando el nombre del arreglo, y el subindice del arreglo (o índice, o el número del elemento). Esto significa que muchos nombres de un arreglo son igaules a punteros de expresiones. Aquí hay un ejemplo, imagina un arreglo de enteros llamado `mi_arreglo`. 
+Puedes acceder a los elementos de un arreglo especificando el nombre del arreglo, y el subíndice del arreglo (o índice, o el número del elemento). Esto significa que muchos nombres de un arreglo son iguales a punteros de expresiones. Aquí hay un ejemplo, imagina un arreglo de enteros llamado `mi_arreglo`. 
 
 ```
 mi_arreglo[0] = 5;
 ```
 
-La expresión de subindice del arreglo `A[i]` esta definida como una expresión identica `(*((A) + (i)))`. Esto significa que muchos de los usos de un nombre de arreglo son equivalentes a una expresión de punteros. También significa que tu no puedes tener un subindice de un arreglo teniendo el clase de almacenamiento `register`.
+La expresión de subíndice del arreglo `A[i]` esta definida como una expresión idéntica `(*((A) + (i)))`. Esto significa que muchos de los usos de un nombre de arreglo son equivalentes a una expresión de punteros. También significa que tu no puedes tener un subíndice de un arreglo teniendo el clase de almacenamiento `register`.
+
+===
+
+## 3.14 Llamadas a funciones como expresiones ##
+
+Una llamada a cualquier función que regresa un valor es una expresión.
+
+```
+int function(void);
+...
+a = 10 + function();
+```
+
+===
+
+## 3.15 El operador de coma ##
+
+El operador de coma , se utiliza para separar dos expresiones (aparentemente relacionadas). Por ejemplo, la primera expresión podría producir un valor que es utilizado por una segunda expresión:
+
+```
+x++, y = x * x;
+```
+
+Más comúnmente, el operador coma es utilizado para sentencias `for`, como esta:
+
+```
+/* Utilizando el operador coma en una sentencia `for`, de la siguiente forma */
+
+for(x = 1, y = 10; x <= 10 && y >= 1; x++, y--)
+{
+...
+}
+```
+
+Esto te permite establecer, monitorear y modificar multiples controles de expresión para la sentencia `for`.
+
+Una coma también es utilizada para separar parámetros de funciones; sin embargo, esto *no* es el operador coma en acción. De echo, la operador coma es utilizado como se discutió aquí en una llamada a función, entonces el compilador lo interpretará como una llamada a la función con un parámetro adicional.
+
+Si deseas utilizar el operador coma en el argumento de una función, necesitas colocar paréntesis a su alrededor. Esto es por que las comas en la lista de argumentos de una función tienen un significado diferente,: separan argumentos. Así.
+
+```
+foo(x, y = 47, x, z);
+```
+
+es interpretada como una llamada a una función con cuatro argumentos, pero
+
+```
+foo(x, (y=47, x), z);
+```
+
+Es una llamada a función con solo tres argumentos. (El segundo argumento es (y=47, x).)
 
 ===
