@@ -15,6 +15,7 @@
 - [Subindices de arreglos](#313-subindices-de-arreglos)
 - [Llamadas a funciones como expresiones](#314-llamadas-a-funciones-como-expresiones)
 - [El operador de coma](#315-el-operador-de-coma)
+- [Expresiones de acceso a miembros]()
 
 
 
@@ -573,5 +574,41 @@ foo(x, (y=47, x), z);
 ```
 
 Es una llamada a función con solo tres argumentos. (El segundo argumento es (y=47, x).)
+
+===
+
+## 3.16 Expresiones de acceso a miembros ##
+
+Puedes utilizar el operador de acceso a miembros . para acceder a los miembros de una estructura o variable union. Colocas el nombre de la variable de estructura en la parte izquierda del operador, y el nombre del miembro en el lado derecho.
+
+```
+struct punto
+{
+  int x, y;
+};
+
+struct punto primer_punto;
+
+primer_punto.x = 0;
+primer_punto.y = 5;
+```
+
+También puedes tener acceso a los miembros de una estructura o una variable union mediante el puntero, utilizando el operador indirecto de acceso a miembros ->. x-> es equivalente a (*x).y.
+
+```
+struct pescado
+{
+    int longitud, peso;
+};
+
+struct pescado salmon;
+
+struct pescado *puntero_pescado = &salmon;
+
+puntero_pescado->longitud = 3;
+puntero_pescado->peso = 9;
+```
+
+Ver [punteros](https://github.com/mitogh/Manual-GNU-C/blob/master/2#26-punteros).
 
 ===
