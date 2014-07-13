@@ -77,7 +77,7 @@
   - [3.13 Subindices de arreglos](3#313-subindices-de-arreglos)
   - [3.14 Llamadas a funciones como expresiones](3#314-llamadas-a-funciones-como-expresiones)
   - [3.15 El operador de coma](3#315-el-operador-de-coma)
-  - [3.16 Expresiones de acceso a miembros]()
+  - [3.16 Expresiones de acceso a miembros](3#316-expresiones-de-acceso-a-miembros)
 	
 ## El manual de referencia de GNU C ##
 

@@ -909,7 +909,7 @@ union numeros *numero_ptr = &foo;
 
 Ese ejemplo crea un nuevo tipo, `union numeros`, y declara (y inicializa su primer miembro) una variable de ese tipo llamada `foo`. Finalmente, declara un puntero del tipo `union numeros`, y le otorga la dirección de `foo`.
 
-Puedes acceder a los miembros de una variable de union a través de un puntero, pero no se pueden utilizar más el operador regular de acceso a miembros. En su lugar, tienes que utilizar el operador de acceso indirecto a miembros (ver Expresiones de acceso a miembros). Continuando con el ejemplo anterior, el siguiente ejemplo cambiará el valor del primer miembro de `foo`:
+Puedes acceder a los miembros de una variable de union a través de un puntero, pero no se pueden utilizar más el operador regular de acceso a miembros. En su lugar, tienes que utilizar el operador de acceso indirecto a miembros (ver [Expresiones de acceso a miembros](https://github.com/mitogh/Manual-GNU-C/tree/master/3#316-expresiones-de-acceso-a-miembros)). Continuando con el ejemplo anterior, el siguiente ejemplo cambiará el valor del primer miembro de `foo`:
 
 ```
 numbero_ptr -> i = 450;
@@ -934,7 +934,7 @@ struct pescado *pescado_ptr = &salmon;
 
 Ese ejemplo crea un nuevo estructura del tipo, `struct pescado`, y declara (y inicializa) una variable de ese tipo llamada `salmon`. Finalmente, declara un puntero al tipo `struct pescado`, y le otorga la dirección de `salmon`.
 
-Puedes acceder a los miembros de una variable de estructura a través ed un puntero, pero no se pueden utilizar más el operador regular de acceso a miembros. En su lugar, tienes que utilizar el operador de acceso indirecto a miembros (Ver Expresiones de acceso a miembros). Continuando con el ejemplo anterior, el siguiente ejemplo cambiará los valores de los miembros de `salmon`:
+Puedes acceder a los miembros de una variable de estructura a través ed un puntero, pero no se pueden utilizar más el operador regular de acceso a miembros. En su lugar, tienes que utilizar el operador de acceso indirecto a miembros (Ver [Expresiones de acceso a miembros](https://github.com/mitogh/Manual-GNU-C/tree/master/3#316-expresiones-de-acceso-a-miembros)). Continuando con el ejemplo anterior, el siguiente ejemplo cambiará los valores de los miembros de `salmon`:
 
 ```
 pescado_ptr -> longitud = 5.1;
