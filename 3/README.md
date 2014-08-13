@@ -17,8 +17,6 @@
 - [El operador de coma](#315-el-operador-de-coma)
 - [Expresiones de acceso a miembros](#316-expresiones-de-acceso-a-miembros)
 
-
-
 ===
 
 ## 3.1 Expresiones ##
@@ -610,5 +608,42 @@ puntero_pescado->peso = 9;
 ```
 
 Ver [punteros](https://github.com/mitogh/Manual-GNU-C/blob/master/2#26-punteros).
+
+===
+
+## 3.17 Expresiones condicionales ##
+
+Se utiliza el operador condicional para que toda la expresión condicional se pueda evaluar en su segundo o su tercer operando, basado en el valor de verdad de su primer operando. He aquí un ejemplo:
+
+```
+a ? b : c
+```
+
+Si el resultado de `a` es verdadero, entonces la expresión `b` es evaluada y el resultado es el valor de `b`. De otro manera, la expresión `c` es evaluada y el resultado es `c`.
+
+Las expresiones `b` y `c`deben ser compatibles. Esto es, ambas deben ser
+
+1. Tipos aritméticos
+2. Tipos compatibles `struct` o `union`
+3. Punteros a tipos compatibles (uno de los cuales puede ser el puntero NULL)
+
+Alternativamente, un operando es un puntero y el otro es un puntero a `void*`.
+
+Aquí esta un ejemplo:
+
+```
+a = (x == 5) ? y : z;
+```
+
+Aquí, si `x` es igual a 5, entonces recibirá el valor de `y`. De otra forma, `a` recibirá el valor de `z`. Esto puede ser una forma abreviada de escribir un sentencia simple `if...else`. El siguiente ejemplo cumplirá la misma tarea anterior:
+
+```
+if(x == 5)
+  a = y;
+else
+  a = z;
+```
+
+Si el primer operando del operador condicional es verdadero, entonces el tercer operando nunca es evaluado. De manera similar, si el primer operando es falso, entonces el segundo operando nunca es evaluado. El primer operando siempre es evaluado.
 
 ===
