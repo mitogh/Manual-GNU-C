@@ -3,7 +3,6 @@ title: Manual de Referencia de GNU C
 ---
 # Manual de Referencia de GNU C - [[Archivo Original]](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html)#
 
-
 ## Tabla de contenidos ##
 
 - [El manual de Referencia de GNU C](#el-manual-de-referencia-de-gnu-c)
