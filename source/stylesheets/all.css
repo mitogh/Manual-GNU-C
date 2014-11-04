@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+body {
+    font-family: "Times New Roman"; 
+    padding: 10px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: -1px;
+    margin: 0; 
+}
+
